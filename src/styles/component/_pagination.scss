@@ -1,0 +1,44 @@
+.pagination-customize {
+	ul {
+		margin-bottom: 0;
+	}
+
+	.pagination {
+		justify-content: right;
+
+		.page-item {
+			.page-link {
+				border: 0;
+				color: $black-color;
+			}
+
+			&.active {
+				.page-link {
+					border-radius: 8px;
+					color: $white-color;
+					background-color: $primary-blue-color;
+				}
+			}
+		}
+	}
+
+	.mat-paginator {
+		.mat-paginator-page-size-select {
+			margin: 0 4px 0 4px;
+		}
+
+		.mat-form-field-infix {
+			padding-top: 0;
+		}
+
+		.mat-form-field-underline {
+			bottom: 0;
+		}
+
+		.mat-paginator-range-actions {
+			button {
+				display: none;
+			}
+		}
+	}
+}

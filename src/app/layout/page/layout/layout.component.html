@@ -1,0 +1,19 @@
+<div class="app-layout">
+	<app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+
+	<mat-sidenav-container>
+		<mat-sidenav #sidenav
+			[mode]="side"
+			[opened]="opened"
+			role="navigation"
+			[ngClass]="{'sidenav__close': !sidenav.opened}">
+			<app-sidebar></app-sidebar>
+		</mat-sidenav>
+
+		<mat-sidenav-content [ngClass]="{'sidenav__content': !sidenav.opened}">
+			<main class="container p-4">
+				<router-outlet></router-outlet>
+			</main>
+		</mat-sidenav-content>
+	</mat-sidenav-container>
+</div>

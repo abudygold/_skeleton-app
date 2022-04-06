@@ -1,0 +1,312 @@
+<h2 class="font-heading font-AxiataBold mb-3">Alert</h2>
+
+<p>This alert serves to display a short message, distract the user but does not interfere with the journey or flow.
+	Usually this alert displays success, error, warning, and other important messages.</p>
+
+<!-- <a href="https://www.carbondesignsystem.com/components/breadcrumb/usage/"
+	class="font-dark font-12px"
+	target="blank">
+	Source: https://www.carbondesignsystem.com/components/breadcrumb/usage/
+</a>
+<a href="https://getuikit.com/docs/breadcrumb"
+	class="font-dark font-12px"
+	target="blank">
+	Source: https://getuikit.com/docs/breadcrumb
+</a>
+<a href="https://mui.com/components/breadcrumbs/"
+	class="font-dark font-12px"
+	target="blank">
+	Source: https://mui.com/components/breadcrumbs/
+</a> -->
+
+<mat-divider class="mt-4 mb-2"></mat-divider>
+
+<div class="d-flex justify-content-between align-items-center my-4">
+	<p class="font-black font-AxiataBold mb-0">
+		Alert Inline / Dismissable
+	</p>
+
+	<button mat-flat-button
+		color="primary"
+		class="font-12px"
+		(click)="isShowSnippet = !isShowSnippet">
+		<mat-icon class="font-20px">code</mat-icon> Code
+	</button>
+</div>
+
+<div *ngIf="isShowSnippet">
+	<pre><code [highlight]="codeSnippet" [languages]="['html']"></code></pre>
+</div>
+
+<div class="row">
+	<div class="col-6">
+		<div class="alert alert-danger d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_danger"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+		</div>
+		<div class="alert alert-info d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_info"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+		</div>
+		<div class="alert alert-warning d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_warning"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+		</div>
+		<div class="alert alert-success d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_success"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+		</div>
+	</div>
+	<div class="col-6">
+		<div class="alert alert-danger d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_danger"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+
+			<mat-icon class="icon-menu alert-close ml-auto pointer"
+				svgIcon="icon_danger_close"></mat-icon>
+		</div>
+		<div class="alert alert-info d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_info"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+
+			<mat-icon class="icon-menu alert-close ml-auto pointer"
+				svgIcon="icon_info_close"></mat-icon>
+		</div>
+		<div class="alert alert-warning d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_warning"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+
+			<mat-icon class="icon-menu alert-close ml-auto pointer"
+				svgIcon="icon_warning_close"></mat-icon>
+		</div>
+		<div class="alert alert-success d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_success"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+
+			<mat-icon class="icon-menu alert-close ml-auto pointer"
+				svgIcon="icon_success_close"></mat-icon>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-6">
+		<div class="alert alert-danger outline d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_danger"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+		</div>
+		<div class="alert alert-info outline d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_info"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+		</div>
+		<div class="alert alert-warning outline d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_warning"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+		</div>
+		<div class="alert alert-success outline d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_success"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+		</div>
+	</div>
+	<div class="col-6">
+		<div class="alert alert-danger outline d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_danger"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+
+			<mat-icon class="icon-menu alert-close ml-auto pointer"
+				svgIcon="icon_danger_close"></mat-icon>
+		</div>
+		<div class="alert alert-info outline d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_info"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+
+			<mat-icon class="icon-menu alert-close ml-auto pointer"
+				svgIcon="icon_info_close"></mat-icon>
+		</div>
+		<div class="alert alert-warning outline d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_warning"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+
+			<mat-icon class="icon-menu alert-close ml-auto pointer"
+				svgIcon="icon_warning_close"></mat-icon>
+		</div>
+		<div class="alert alert-success outline d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_success"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+
+			<mat-icon class="icon-menu alert-close ml-auto pointer"
+				svgIcon="icon_success_close"></mat-icon>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-6">
+		<div class="alert alert-danger fill d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_danger_white"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+		</div>
+		<div class="alert alert-info fill d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_info_white"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+		</div>
+		<div class="alert alert-warning fill d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_warning_white"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+		</div>
+		<div class="alert alert-success fill d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_success_white"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+		</div>
+	</div>
+	<div class="col-6">
+		<div class="alert alert-danger fill d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_danger_white"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+
+			<mat-icon class="icon-menu alert-close ml-auto pointer"
+				svgIcon="icon_close_white"></mat-icon>
+		</div>
+		<div class="alert alert-info fill d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_info_white"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+
+			<mat-icon class="icon-menu alert-close ml-auto pointer"
+				svgIcon="icon_close_white"></mat-icon>
+		</div>
+		<div class="alert alert-warning fill d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_warning_white"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+
+			<mat-icon class="icon-menu alert-close ml-auto pointer"
+				svgIcon="icon_close_white"></mat-icon>
+		</div>
+		<div class="alert alert-success fill d-flex align-items-center"
+			role="alert">
+			<mat-icon class="icon-menu mr-3"
+				svgIcon="icon_success_white"></mat-icon>
+
+			<div>
+				This is a error alert. Please take a look and do your responsibility
+			</div>
+
+			<mat-icon class="icon-menu alert-close ml-auto pointer"
+				svgIcon="icon_close_white"></mat-icon>
+		</div>
+	</div>
+</div>

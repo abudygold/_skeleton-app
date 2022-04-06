@@ -1,0 +1,76 @@
+<h2 class="font-heading font-AxiataBold mb-3">Checkbox</h2>
+
+<p>Checkbox is an interactive control that allows the user to select one or more available options. Usually this
+	checkbox is marked with a check mark.</p>
+
+<p class="mb-0">Source:</p>
+
+<a href=" https://atlassian.design/components/checkbox/examples"
+	class="d-block font-dark font-12px"
+	target="blank">
+	https://atlassian.design/components/checkbox/examples
+</a>
+<a href="https://v12.material.angular.io/components/checkbox/api"
+	class="d-block font-dark font-12px"
+	target="blank">
+	Angular Material - Checkbox
+</a>
+
+<mat-divider class="mt-4 mb-2"></mat-divider>
+
+<div class="d-flex justify-content-between align-items-center my-4">
+	<p class="font-black font-AxiataBold mb-0">
+		Basic checkboxes
+	</p>
+
+	<button mat-flat-button
+		color="primary"
+		class="font-12px"
+		(click)="isShowSnippet = !isShowSnippet">
+		<mat-icon class="font-20px">code</mat-icon> Code
+	</button>
+</div>
+
+<div *ngIf="isShowSnippet">
+	<mat-tab-group mat-align-tabs="start">
+		<mat-tab label="HTML">
+			<pre><code [highlight]="codeSnippet" [languages]="['html']"></code></pre>
+		</mat-tab>
+		<mat-tab label="TS">
+			<pre><code [highlight]="codeSnippetTS" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+	</mat-tab-group>
+</div>
+
+<div class="row">
+	<div class="col-12">
+		<section>
+			<p class="mb-2">
+				<mat-checkbox>Check me!</mat-checkbox>
+			</p>
+			<p class="mb-2">
+				<mat-checkbox [disabled]="true">Disabled</mat-checkbox>
+			</p>
+		</section>
+
+		<section>
+			<span>
+				<mat-checkbox [checked]="allComplete"
+					[indeterminate]="someComplete()"
+					(change)="setAll($event.checked)">
+					{{task.name}}
+				</mat-checkbox>
+			</span>
+			<span>
+				<ul class="list-style-none">
+					<li *ngFor="let subtask of task.subtasks">
+						<mat-checkbox [(ngModel)]="subtask.completed"
+							(ngModelChange)="updateAllComplete()">
+							{{subtask.name}}
+						</mat-checkbox>
+					</li>
+				</ul>
+			</span>
+		</section>
+	</div>
+</div>

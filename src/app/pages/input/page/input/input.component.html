@@ -1,0 +1,284 @@
+<h2 class="font-heading font-AxiataBold mb-3">Text Fields</h2>
+
+<p>A text field is a basic text control that enables the user to type a small amount of text. No matter what app you
+	use, you’re bound to run across some little text field requiring your personal information. Even typing a question
+	into Google is considered filling out a form which has only one text field.</p>
+
+<p class="mb-0">Source:</p>
+
+<a href=" https://uxplanet.org/designing-perfect-text-field-clarity-accessibility-and-user-effort-d03c1e26004b"
+	class="d-block font-dark font-12px"
+	target="blank">
+	https://uxplanet.org/designing-perfect-text-field-clarity-accessibility-and-user-effort-d03c1e26004b
+</a>
+<a href="https://v12.material.angular.io/components/input/api"
+	class="d-block font-dark font-12px"
+	target="blank">
+	Angular Material - Input
+</a>
+<a href="https://v12.material.angular.io/components/form-field/api"
+	class="d-block font-dark font-12px"
+	target="blank">
+	Angular Material - Form field
+</a>
+
+<mat-divider class="mt-4 mb-2"></mat-divider>
+
+<div class="d-flex justify-content-between align-items-center my-4">
+	<p class="font-black font-AxiataBold mb-0">
+		Text Fields
+	</p>
+
+	<button mat-flat-button
+		color="primary"
+		class="font-12px"
+		(click)="isShowSnippet = !isShowSnippet">
+		<mat-icon class="font-20px">code</mat-icon> Code
+	</button>
+</div>
+
+<div *ngIf="isShowSnippet">
+	<mat-tab-group mat-align-tabs="start">
+		<mat-tab label="HTML">
+			<pre><code [highlight]="codeSnippet" [languages]="['html']"></code></pre>
+		</mat-tab>
+		<mat-tab label="TS">
+			<pre><code [highlight]="codeSnippetTS" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+	</mat-tab-group>
+</div>
+
+<div class="row mb-4">
+	<div class="col-md-2 offset-md-2">Default</div>
+	<div class="col-md-3">Focus</div>
+	<div class="col-md-3">Disabled</div>
+	<div class="col-md-2">Error</div>
+</div>
+
+<div class="row">
+	<div class="col-md-2">No Icon</div>
+	<div class="col-md-2">
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				placeholder="No Icon"
+				autocomplete="off">
+		</mat-form-field>
+	</div>
+	<div class="col-md-3">
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				placeholder="No Icon"
+				autocomplete="off">
+		</mat-form-field>
+	</div>
+	<div class="col-md-3">
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				placeholder="No Icon"
+				autocomplete="off"
+				[formControl]="formDisabled">
+		</mat-form-field>
+	</div>
+	<div class="col-md-2">
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				placeholder="No Icon"
+				autocomplete="off"
+				[formControl]="form">
+		</mat-form-field>
+
+		<!-- *ngFor="let validation of validationMessages.column" -->
+		<mat-error align="start">
+			<p class="font-12px"
+				*ngIf="form.touched && form.hasError('required')">
+				No Icon is Required
+			</p>
+		</mat-error>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-2">Icon Left</div>
+	<div class="col-md-2">
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				placeholder="Icon Left"
+				autocomplete="off">
+
+			<mat-icon matPrefix
+				class="pointer mr-2">search</mat-icon>
+		</mat-form-field>
+	</div>
+	<div class="col-md-3">
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				placeholder="Icon Left"
+				autocomplete="off">
+
+			<mat-icon matPrefix
+				class="pointer mr-2">search</mat-icon>
+		</mat-form-field>
+	</div>
+	<div class="col-md-3">
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				placeholder="Icon Left"
+				autocomplete="off"
+				[formControl]="formDisabled">
+
+			<mat-icon matPrefix
+				class="mr-2">search</mat-icon>
+		</mat-form-field>
+	</div>
+	<div class="col-md-2">
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				placeholder="Icon Left"
+				autocomplete="off"
+				[formControl]="form">
+
+			<mat-icon matPrefix
+				class="pointer mr-2">search</mat-icon>
+		</mat-form-field>
+
+		<!-- *ngFor="let validation of validationMessages.column" -->
+		<mat-error align="start">
+			<p class="font-12px"
+				*ngIf="form.touched && form.hasError('required')">
+				Icon Left is Required
+			</p>
+		</mat-error>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-2">Icon Right</div>
+	<div class="col-md-2">
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				placeholder="Icon Right"
+				autocomplete="off">
+
+			<mat-icon matSuffix
+				class="pointer ml-2">close</mat-icon>
+		</mat-form-field>
+	</div>
+	<div class="col-md-3">
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				placeholder="Icon Right"
+				autocomplete="off">
+
+			<mat-icon matSuffix
+				class="pointer ml-2">close</mat-icon>
+		</mat-form-field>
+	</div>
+	<div class="col-md-3">
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				placeholder="Icon Right"
+				autocomplete="off"
+				[formControl]="formDisabled">
+
+			<mat-icon matSuffix
+				class="ml-2">close</mat-icon>
+		</mat-form-field>
+	</div>
+	<div class="col-md-2">
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				placeholder="Icon Right"
+				autocomplete="off"
+				[formControl]="form">
+
+			<mat-icon matSuffix
+				class="pointer ml-2">close</mat-icon>
+		</mat-form-field>
+
+		<!-- *ngFor="let validation of validationMessages.column" -->
+		<mat-error align="start">
+			<p class="font-12px"
+				*ngIf="form.touched && form.hasError('required')">
+				Icon Right is Required
+			</p>
+		</mat-error>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-2">Double Icon</div>
+	<div class="col-md-2">
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				placeholder="Double Icon"
+				autocomplete="off">
+
+			<mat-icon matPrefix
+				class="pointer mr-2">search</mat-icon>
+			<mat-icon matSuffix
+				class="pointer ml-2">close</mat-icon>
+		</mat-form-field>
+	</div>
+	<div class="col-md-3">
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				placeholder="Double Icon"
+				autocomplete="off">
+
+			<mat-icon matPrefix
+				class="pointer mr-2">search</mat-icon>
+			<mat-icon matSuffix
+				class="pointer ml-2">close</mat-icon>
+		</mat-form-field>
+	</div>
+	<div class="col-md-3">
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				placeholder="Double Icon"
+				autocomplete="off"
+				[formControl]="formDisabled">
+
+			<mat-icon matPrefix
+				class="mr-2">search</mat-icon>
+			<mat-icon matSuffix
+				class="ml-2">close</mat-icon>
+		</mat-form-field>
+	</div>
+	<div class="col-md-2">
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				placeholder="Double Icon"
+				autocomplete="off"
+				[formControl]="form">
+
+			<mat-icon matPrefix
+				class="pointer mr-2">search</mat-icon>
+			<mat-icon matSuffix
+				class="pointer ml-2">close</mat-icon>
+		</mat-form-field>
+
+		<!-- *ngFor="let validation of validationMessages.column" -->
+		<mat-error align="start">
+			<p class="font-12px"
+				*ngIf="form.touched && form.hasError('required')">
+				Double Icon is Required
+			</p>
+		</mat-error>
+	</div>
+</div>

@@ -1,0 +1,80 @@
+<h2 class="font-heading font-AxiataBold mb-3">Typography</h2>
+
+<!-- <p>This alert serves to display a short message, distract the user but does not interfere with the journey or flow.
+	Usually this alert displays success, error, warning, and other important messages.</p> -->
+
+<!-- <p class="mb-0">Source:</p>
+
+<a href=" https://uxplanet.org/designing-perfect-text-field-clarity-accessibility-and-user-effort-d03c1e26004b"
+	class="d-block font-dark font-12px"
+	target="blank">
+	https://uxplanet.org/designing-perfect-text-field-clarity-accessibility-and-user-effort-d03c1e26004b
+</a>
+<a href="https://v12.material.angular.io/components/button/api"
+	class="d-block font-dark font-12px"
+	target="blank">
+	Angular Material - Typography
+</a> -->
+
+<mat-divider class="mt-4 mb-2"></mat-divider>
+
+<div class="d-flex justify-content-between align-items-center my-4">
+	<p class="font-black font-AxiataBold mb-0">
+		Typography
+	</p>
+
+	<button mat-flat-button
+		color="primary"
+		class="font-12px"
+		(click)="isShowSnippet = !isShowSnippet">
+		<mat-icon class="font-20px">code</mat-icon> Code
+	</button>
+</div>
+
+<div *ngIf="isShowSnippet">
+	<pre><code [highlight]="codeSnippet" [languages]="['html']"></code></pre>
+</div>
+
+<div class="row">
+	<div class="col-4">
+		<h5 class="h5-InterBold text-center">Bold</h5>
+	</div>
+	<div class="col-4">
+		<h5 class="h5-InterMedium text-center">Medium</h5>
+	</div>
+	<div class="col-4">
+		<h5 class="h5-InterRegular text-center">Regular</h5>
+	</div>
+</div>
+<div class="row">
+	<div class="col-4">
+		<h1 class="h1-InterBold">Heading 1</h1>
+		<h2 class="h2-InterBold">Heading 2</h2>
+		<h3 class="h3-InterBold">Heading 3</h3>
+		<h4 class="h4-InterBold">Heading 4</h4>
+		<h5 class="h5-InterBold">Heading 5</h5>
+		<p class="subtitle-36px-InterBold">Subtitle 1</p>
+		<p class="subtitle-32px-InterBold">Subtitle 2</p>
+		<p class="subtitle-28px-InterBold">Subtitle 3</p>
+	</div>
+	<div class="col-4">
+		<h1 class="h1-InterMedium">Heading 1</h1>
+		<h2 class="h2-InterMedium">Heading 2</h2>
+		<h3 class="h3-InterMedium">Heading 3</h3>
+		<h4 class="h4-InterMedium">Heading 4</h4>
+		<h5 class="h5-InterMedium">Heading 5</h5>
+		<p class="subtitle-36px-InterMedium">Subtitle 1</p>
+		<p class="subtitle-32px-InterMedium">Subtitle 2</p>
+		<p class="subtitle-28px-InterMedium">Subtitle 3</p>
+	</div>
+	<div class="col-4">
+		<h1 class="h1-InterRegular">Heading 1</h1>
+		<h2 class="h2-InterRegular">Heading 2</h2>
+		<h3 class="h3-InterRegular">Heading 3</h3>
+		<h4 class="h4-InterRegular">Heading 4</h4>
+		<h5 class="h5-InterRegular">Heading 5</h5>
+		<p class="subtitle-36px-InterRegular">Subtitle 1</p>
+		<p class="subtitle-32px-InterRegular">Subtitle 2</p>
+		<p class="subtitle-28px-InterRegular">Subtitle 3</p>
+	</div>
+</div>

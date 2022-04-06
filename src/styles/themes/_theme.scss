@@ -1,0 +1,22 @@
+@import '~@angular/material/theming';
+@import '../abstracts/variables';
+
+/* Material theme */
+@include mat-core();
+
+$custom-theme-primary: mat-palette($color-primary-pallete);
+$custom-theme-accent: mat-palette($mat-grey);
+$custom-theme-warn: mat-palette($mat-red);
+$custom-theme: mat-light-theme(
+	$custom-theme-primary,
+	$custom-theme-accent,
+	$custom-theme-warn
+);
+
+@include angular-material-theme($custom-theme);
+
+$custom-typography: mat-typography-config(
+	$font-family: $font-family-medium,
+);
+
+@include mat-core($custom-typography);

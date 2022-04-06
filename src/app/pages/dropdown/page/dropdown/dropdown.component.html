@@ -1,0 +1,77 @@
+<h2 class="font-heading font-AxiataBold mb-3">Select</h2>
+
+<p>The dropdown is used to select an option. Each option has a specific value, or can usually be used like sorting or
+	filtering.</p>
+
+<p class="mb-0">Source:</p>
+
+<a href=" https://www.carbondesignsystem.com/components/dropdown/usage/"
+	class="d-block font-dark font-12px"
+	target="blank">
+	https://www.carbondesignsystem.com/components/dropdown/usage/
+</a>
+<a href="https://v12.material.angular.io/components/select/api"
+	class="d-block font-dark font-12px"
+	target="blank">
+	Angular Material - Select
+</a>
+
+<mat-divider class="mt-4 mb-2"></mat-divider>
+
+<div class="d-flex justify-content-between align-items-center my-4">
+	<p class="font-black font-AxiataBold mb-0">
+		Basic Select
+	</p>
+
+	<button mat-flat-button
+		color="primary"
+		class="font-12px"
+		(click)="isShowSnippet = !isShowSnippet">
+		<mat-icon class="font-20px">code</mat-icon> Code
+	</button>
+</div>
+
+<div *ngIf="isShowSnippet">
+	<mat-tab-group mat-align-tabs="start">
+		<mat-tab label="HTML">
+			<pre><code [highlight]="codeSnippet" [languages]="['html']"></code></pre>
+		</mat-tab>
+		<mat-tab label="TS">
+			<pre><code [highlight]="codeSnippetTS" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+	</mat-tab-group>
+</div>
+
+<div class="row">
+	<div class="col-12">
+		<mat-form-field class="input-classic mb-3"
+			floatLabel="never">
+			<mat-label>Basic</mat-label>
+
+			<mat-select>
+				<mat-option>-- None --</mat-option>
+
+				<mat-option [value]="option"
+					*ngFor="let option of ['One', 'Two', 'Three']">
+					{{ option }}
+				</mat-option>
+			</mat-select>
+		</mat-form-field>
+
+		<mat-form-field class="input-classic"
+			floatLabel="never">
+			<mat-label>Multiple</mat-label>
+			<mat-select [formControl]="toppings"
+				multiple>
+				<mat-select-trigger>
+					{{toppings.value ? toppings.value[0] : ''}}
+					<span *ngIf="toppings.value?.length > 1">
+						(+{{toppings.value.length - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+					</span>
+				</mat-select-trigger>
+				<mat-option *ngFor="let topping of toppingList"
+					[value]="topping">{{topping}}</mat-option>
+			</mat-select>
+		</mat-form-field>
+	</div>
+</div>

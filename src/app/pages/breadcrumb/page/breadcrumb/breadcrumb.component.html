@@ -1,0 +1,65 @@
+<h2 class="font-heading font-AxiataBold mb-3">Breadcrumb</h2>
+
+<p>Breadcrumb allows us to know the current page location, and helps the user to know the hierarchical level of each
+	page.</p>
+
+<p class="mb-0">Source:</p>
+
+<a href=" https://www.carbondesignsystem.com/components/breadcrumb/usage/"
+	class="d-block font-dark font-12px"
+	target="blank">
+	https://www.carbondesignsystem.com/components/breadcrumb/usage/
+</a>
+<a href="https://getuikit.com/docs/breadcrumb"
+	class="d-block font-dark font-12px"
+	target="blank">
+	https://getuikit.com/docs/breadcrumb
+</a>
+<a href="https://mui.com/components/breadcrumbs/"
+	class="d-block font-dark font-12px"
+	target="blank">
+	https://mui.com/components/breadcrumbs/
+</a>
+
+<mat-divider class="mt-4 mb-2"></mat-divider>
+
+<div class="d-flex justify-content-between align-items-center my-4">
+	<p class="font-black font-AxiataBold mb-0">
+		Breadcrumb
+	</p>
+
+	<button mat-flat-button
+		color="primary"
+		class="font-12px"
+		(click)="isShowSnippet = !isShowSnippet">
+		<mat-icon class="font-20px">code</mat-icon> Code
+	</button>
+</div>
+
+<div *ngIf="isShowSnippet">
+	<pre><code [highlight]="codeSnippet" [languages]="['html']"></code></pre>
+</div>
+
+<div class="row">
+	<div class="col-12">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="#">Home</a></li>
+				<li class="breadcrumb-item"><a href="#">Library</a></li>
+				<li class="breadcrumb-item active"
+					aria-current="page">Data</li>
+			</ol>
+		</nav>
+	</div>
+
+	<div class="col-12">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb breadcrumb-dividers">
+				<li class="breadcrumb-item"><a href="#">Home</a></li>
+				<li class="breadcrumb-item"><a href="#">Library</a></li>
+				<li class="breadcrumb-item active"
+					aria-current="page">Data</li>
+			</ol>
+		</nav>
+	</div>
+</div>

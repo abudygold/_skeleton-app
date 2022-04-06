@@ -1,0 +1,29 @@
+.user-status {
+	&.mat-slide-toggle {
+		.mat-slide-toggle-bar {
+			width: 30px;
+			height: 17px;
+
+			.mat-slide-toggle-thumb-container {
+				width: 15px;
+				height: 15px;
+				top: 1px;
+
+				.mat-slide-toggle-thumb {
+					width: 15px;
+					height: 15px;
+				}
+			}
+		}
+	}
+
+	&.mat-checked {
+		.mat-slide-toggle-bar {
+			background-color: $color-success !important;
+
+			.mat-slide-toggle-thumb {
+				background-color: $white-color;
+			}
+		}
+	}
+}

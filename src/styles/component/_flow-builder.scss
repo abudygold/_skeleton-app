@@ -1,0 +1,15 @@
+.arrow {
+	&::before {
+		content: "";
+		right: 0;
+		padding: 5px;
+		margin-top: -7px;
+		position: absolute;
+		display: inline-block;
+		border: solid rgba(73,204,217,1);
+		border-width: 0 1px 1px 0;
+		transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+	}
+  }
+  

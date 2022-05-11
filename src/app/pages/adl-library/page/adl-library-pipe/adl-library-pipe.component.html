@@ -193,9 +193,13 @@
 			<div class="col-12 text-center">
 				<p>Safe Video URL</p>
 
-				<iframe [src]="catVideoEmbed | safe: 'resourceUrl'"
-					width="640"
-					height="390"></iframe>
+				<iframe width="640"
+					height="390"
+					[src]="catVideoEmbed | safe: 'resourceUrl'"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
 			</div>
 		</div>
 

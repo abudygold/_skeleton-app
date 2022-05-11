@@ -31,9 +31,10 @@ export class ADLLibraryPipeComponent implements OnInit {
 	ngOnInit(): void {
 		this.isShowSnippetPipe = false;
 		this.isShowSnippetDirective = false;
-		this.htmlContent = `<h1>Lorem ipsum dolor sit amet.</h1>`;
-		this.pictureUrl = `https://angular.io/assets/images/logos/angular/angular.svg`;
-		this.catVideoEmbed = `https://www.youtube.com/embed/QH2-TGUlwu4"`;
+		this.htmlContent = '<h1>Lorem ipsum dolor sit amet.</h1>';
+		this.pictureUrl =
+			'https://angular.io/assets/images/logos/angular/angular.svg';
+		this.catVideoEmbed = 'https://www.youtube.com/embed/IZEolKjcjks';
 		this.codeSnippetPipe = CodeSnippetPipeHTMLConst;
 		this.codeSnippetDirective = CodeSnippetDirectiveHTMLConst;
 		this.codeSnippetPipeTS = CodeSnippetPipeTSConst;

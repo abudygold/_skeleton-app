@@ -1,2 +1,62 @@
-<adl-table [table]="table"
-	(nextAction)="clickedButton($event)"></adl-table>
+<h2 class="font-heading font-AxiataBold mb-3">View List</h2>
+
+<!-- <p>This alert serves to display a short message, distract the user but does not interfere with the journey or flow.
+	Usually this alert displays success, error, warning, and other important messages.</p> -->
+
+<!-- <a href="https://www.carbondesignsystem.com/components/breadcrumb/usage/"
+	class="font-dark font-12px"
+	target="blank">
+	Source: https://www.carbondesignsystem.com/components/breadcrumb/usage/
+</a>
+<a href="https://getuikit.com/docs/breadcrumb"
+	class="font-dark font-12px"
+	target="blank">
+	Source: https://getuikit.com/docs/breadcrumb
+</a>
+<a href="https://mui.com/components/breadcrumbs/"
+	class="font-dark font-12px"
+	target="blank">
+	Source: https://mui.com/components/breadcrumbs/
+</a> -->
+
+<mat-divider class="mt-4 mb-2"></mat-divider>
+
+<div class="d-flex justify-content-between align-items-center my-4">
+	<p class="font-black font-AxiataBold mb-0">
+		View List
+	</p>
+
+	<button mat-flat-button
+		color="primary"
+		class="font-12px"
+		(click)="isShowSnippet = !isShowSnippet">
+		<mat-icon class="font-20px">code</mat-icon> Code
+	</button>
+</div>
+
+<div *ngIf="isShowSnippet">
+	<mat-tab-group mat-align-tabs="start">
+		<mat-tab label="HTML">
+			<pre><code [highlight]="codeSnippet" [languages]="['html']"></code></pre>
+		</mat-tab>
+		<mat-tab label="TS">
+			<pre><code [highlight]="codeSnippetTS" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Module">
+			<pre><code [highlight]="codeSnippetModule" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Table Config">
+			<pre><code [highlight]="codeSnippetTableConfig" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Path">
+			<pre><code [highlight]="codeSnippetPathConfig" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+	</mat-tab-group>
+</div>
+
+<div class="row">
+	<div class="col-12">
+		<adl-table [table]="table"
+			(nextAction)="clickedButton($event)"></adl-table>
+	</div>
+</div>

@@ -1,8 +1,14 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { BaseService, ButtonModel, TableModel } from 'axiata-ui-framework';
+import { Router } from '@angular/router';
+import { BaseService, TableButtonModel, TableModel } from 'adl-ui-framework';
 import { Subscription } from 'rxjs';
 import {
-	ViewListServicePathConst,
+	CodeSnippetViewListConst,
+	CodeSnippetViewListModuleConst,
+	CodeSnippetViewListServicePathConst,
+	CodeSnippetViewListTableConfigConst,
+	CodeSnippetViewListTSConst,
+	UserViewListServicePathConst,
 	ViewListTableColumnConst,
 	ViewListTableLabelConst,
 } from '../../shared/const';
@@ -16,13 +22,25 @@ import { UserModel } from '../../shared/model';
 export class ADLLibraryViewListComponent implements OnInit, OnDestroy {
 	public isLoading!: boolean;
 	public table!: TableModel;
+	public isShowSnippet!: boolean;
+	public codeSnippet!: string;
+	public codeSnippetTS!: string;
+	public codeSnippetModule!: string;
+	public codeSnippetTableConfig!: string;
+	public codeSnippetPathConfig!: string;
 
 	private subscribers: Subscription[] = [];
 
-	constructor(private baseService: BaseService) {}
+	constructor(private router: Router, private baseService: BaseService) {}
 
 	ngOnInit(): void {
 		this.isLoading = false;
+		this.isShowSnippet = false;
+		this.codeSnippet = CodeSnippetViewListConst;
+		this.codeSnippetTS = CodeSnippetViewListTSConst;
+		this.codeSnippetModule = CodeSnippetViewListModuleConst;
+		this.codeSnippetTableConfig = CodeSnippetViewListTableConfigConst;
+		this.codeSnippetPathConfig = CodeSnippetViewListServicePathConst;
 		this.subscribers = [];
 
 		this.initTable();
@@ -30,18 +48,23 @@ export class ADLLibraryViewListComponent implements OnInit, OnDestroy {
 	}
 
 	private initTable(): void {
-		const detailButton = new ButtonModel(
-			'Detail',
+		const editButton = new TableButtonModel(
+			'Edit',
+			'edit',
+			'flat',
+			'icon',
 			'primary',
-			'detail',
-			'flat'
+			false,
+			'edit'
 		);
-		const editButton = new ButtonModel('Edit', 'warn', 'edit', 'stroked');
-		const deleteButton = new ButtonModel(
+		const deleteButton = new TableButtonModel(
 			'Delete',
-			'warn',
 			'delete',
-			'flat'
+			'stroked',
+			'icon',
+			'warn',
+			false,
+			'delete'
 		);
 
 		this.table = new TableModel(
@@ -51,7 +74,7 @@ export class ADLLibraryViewListComponent implements OnInit, OnDestroy {
 			ViewListTableLabelConst,
 			1,
 			10,
-			[detailButton, editButton, deleteButton],
+			[editButton, deleteButton],
 			true
 		);
 	}
@@ -60,7 +83,7 @@ export class ADLLibraryViewListComponent implements OnInit, OnDestroy {
 		this.isLoading = true;
 
 		const url =
-			ViewListServicePathConst +
+			UserViewListServicePathConst +
 			'?page=' +
 			this.table.page +
 			'&limit=' +
@@ -80,18 +103,37 @@ export class ADLLibraryViewListComponent implements OnInit, OnDestroy {
 		this.subscribers.push(subs);
 	}
 
-	public clickedButton(event: { row: object; action: string }): void {
+	public clickedButton(event: { row: UserModel; action: string }): void {
 		if (!event) {
 			return;
 		}
 
-		if (event.action === 'detail') {
-			console.log('--- Navigate to Detail Page Here ---', event);
-		} else if (event.action === 'edit') {
-			console.log('--- Navigate to Edit Page Here ---', event);
+		if (event.action === 'edit') {
+			this.navigateToEdit(event.row.id);
 		} else if (event.action === 'delete') {
-			console.log('--- Delete Data Here ---', event);
+			this.deleteUserService(event.row.id);
 		}
+	}
+
+	public deleteUserService(id: string): void {
+		const subs = this.baseService
+			.deleteData(UserViewListServicePathConst + '/' + id, null)
+			.subscribe(resp => {
+				if (resp) {
+					this.getViewListService();
+					console.log(resp);
+				}
+			});
+
+		this.subscribers.push(subs);
+	}
+
+	private navigateToEdit(id: string): void {
+		this.router.navigate(['/adl-library/edit'], {
+			queryParams: {
+				id,
+			},
+		});
 	}
 
 	ngOnDestroy(): void {

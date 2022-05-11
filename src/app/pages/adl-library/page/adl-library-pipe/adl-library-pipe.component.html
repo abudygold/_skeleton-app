@@ -1,0 +1,211 @@
+<h2 class="font-heading font-AxiataBold mb-3">Pipe & Directive</h2>
+
+<!-- <p>This alert serves to display a short message, distract the user but does not interfere with the journey or flow.
+	Usually this alert displays success, error, warning, and other important messages.</p> -->
+
+<!-- <a href="https://www.carbondesignsystem.com/components/breadcrumb/usage/"
+	class="font-dark font-12px"
+	target="blank">
+	Source: https://www.carbondesignsystem.com/components/breadcrumb/usage/
+</a>
+<a href="https://getuikit.com/docs/breadcrumb"
+	class="font-dark font-12px"
+	target="blank">
+	Source: https://getuikit.com/docs/breadcrumb
+</a>
+<a href="https://mui.com/components/breadcrumbs/"
+	class="font-dark font-12px"
+	target="blank">
+	Source: https://mui.com/components/breadcrumbs/
+</a> -->
+
+<mat-divider class="mt-4 mb-2"></mat-divider>
+
+<div class="d-flex justify-content-between align-items-center my-4">
+	<p class="font-black font-AxiataBold mb-0">
+		Pipe
+	</p>
+
+	<button mat-flat-button
+		color="primary"
+		class="font-12px"
+		(click)="isShowSnippetPipe = !isShowSnippetPipe">
+		<mat-icon class="font-20px">code</mat-icon> Code
+	</button>
+</div>
+
+<div *ngIf="isShowSnippetPipe">
+	<mat-tab-group mat-align-tabs="start">
+		<mat-tab label="HTML">
+			<pre><code [highlight]="codeSnippetPipe" [languages]="['html']"></code></pre>
+		</mat-tab>
+		<mat-tab label="TS">
+			<pre><code [highlight]="codeSnippetPipeTS" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Module">
+			<pre><code [highlight]="codeSnippetModule" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+	</mat-tab-group>
+</div>
+
+<div class="row">
+	<div class="col-12">
+
+		<form [formGroup]="form">
+			<div class="row">
+				<div class="col-md-12 col-12">
+					<div class="form-group">
+						<mat-form-field class="input-classic input-no-hint"
+							floatLabel="never">
+							<input matInput
+								placeholder="Input Currency : 1.000.000"
+								autocomplete="off"
+								formControlName="inputCurrency"
+								appInputCurrency
+								appOnlyNumber>
+						</mat-form-field>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12 col-12">
+					<div class="form-group">
+						<mat-form-field class="input-classic input-no-hint"
+							floatLabel="never">
+							<input matInput
+								placeholder="Only Number: 123456789"
+								autocomplete="off"
+								formControlName="onlyNumber"
+								appOnlyNumber>
+						</mat-form-field>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12 col-12">
+					<div class="form-group">
+						<mat-form-field class="input-classic input-no-hint"
+							floatLabel="never">
+							<input matInput
+								placeholder="Input Decimal: 10,99"
+								autocomplete="off"
+								formControlName="inputDecimal"
+								appInputDecimal>
+						</mat-form-field>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12 col-12">
+					<div class="form-group">
+						<mat-form-field class="input-classic input-no-hint"
+							floatLabel="never">
+							<input matInput
+								placeholder="Input Number: 123456789"
+								autocomplete="off"
+								formControlName="inputNumber"
+								appInputNumber>
+						</mat-form-field>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12 col-12">
+					<div class="form-group">
+						<mat-form-field class="input-classic input-no-hint"
+							floatLabel="never">
+							<input matInput
+								placeholder="Input Rupiah: Rp 2.000.000"
+								autocomplete="off"
+								formControlName="inputRupiah"
+								appInputRupiah>
+						</mat-form-field>
+					</div>
+				</div>
+			</div>
+		</form>
+
+	</div>
+</div>
+
+<div class="d-flex justify-content-between align-items-center my-4">
+	<p class="font-black font-AxiataBold mb-0">
+		Directive
+	</p>
+
+	<button mat-flat-button
+		color="primary"
+		class="font-12px"
+		(click)="isShowSnippetDirective = !isShowSnippetDirective">
+		<mat-icon class="font-20px">code</mat-icon> Code
+	</button>
+</div>
+
+<div *ngIf="isShowSnippetDirective">
+	<mat-tab-group mat-align-tabs="start">
+		<mat-tab label="HTML">
+			<pre><code [highlight]="codeSnippetDirective" [languages]="['html']"></code></pre>
+		</mat-tab>
+		<mat-tab label="TS">
+			<pre><code [highlight]="codeSnippetDirectiveTS" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Module">
+			<pre><code [highlight]="codeSnippetModule" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+	</mat-tab-group>
+</div>
+
+<div class="row">
+	<div class="col-12">
+
+		<p>
+			Decimal Number: {{ 123456789 | decimalNumber }}
+		</p>
+
+		<p>
+			Rupiah: {{ 123456789 | rupiah }}
+		</p>
+
+		<div class="row">
+			<div class="col-12 text-center">
+				<p>Safe Style</p>
+
+				<div [style.background-image]="'url(' + pictureUrl + ')' | safe: 'style'"
+					class="pic bg-pic"></div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12 text-center">
+				<p>Safe Picture URL</p>
+
+				<img [src]="pictureUrl | safe: 'url'"
+					class="pic"
+					alt="Logo">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12 text-center">
+				<p>Safe Video URL</p>
+
+				<iframe [src]="catVideoEmbed | safe: 'resourceUrl'"
+					width="640"
+					height="390"></iframe>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12 text-center">
+				<p>Safe HTML</p>
+
+				<pre [innerHTML]="htmlContent | safe: 'html'"></pre>
+			</div>
+		</div>
+
+	</div>
+</div>

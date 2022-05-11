@@ -1,5 +1,6 @@
 <div class="app-layout">
-	<app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+	<app-header [isDesktop]="isDesktop"
+		(sidenavToggle)="sidenav.toggle()"></app-header>
 
 	<mat-sidenav-container>
 		<mat-sidenav #sidenav

@@ -84,6 +84,13 @@ const routes: Routes = [
 						m => m.ADLLibraryModule
 					),
 			},
+			{
+				path: 'file-structure',
+				loadChildren: () =>
+					import('../pages/structure/structure.module').then(
+						m => m.StructureModule
+					),
+			},
 		],
 	},
 ];

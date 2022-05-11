@@ -22,7 +22,7 @@
 		"semi-style": ["error", "last"],
 		"no-whitespace-before-property": "error",
 		"sort-imports": [
-			"error",
+			"warn",
 			{
 				"ignoreCase": false,
 				"ignoreDeclarationSort": true,

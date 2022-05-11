@@ -1,24 +1,28 @@
 export const IconsList: { name: string; location: string }[] = [
-	{ name: 'icon_logo', location: 'logo.svg' },
-	{ name: 'icon_open', location: 'icon_accordion_open.svg' },
-	{ name: 'icon_close', location: 'icon_accordion_close.svg' },
-	{ name: 'icon_danger', location: 'icon_danger.svg' },
-	{ name: 'icon_info', location: 'icon_info.svg' },
-	{ name: 'icon_warning', location: 'icon_warning.svg' },
-	{ name: 'icon_success', location: 'icon_success.svg' },
-	{ name: 'icon_danger_white', location: 'icon_danger_white.svg' },
-	{ name: 'icon_info_white', location: 'icon_info_white.svg' },
-	{ name: 'icon_warning_white', location: 'icon_warning_white.svg' },
-	{ name: 'icon_success_white', location: 'icon_success_white.svg' },
-	{ name: 'icon_danger_close', location: 'icon_danger_close.svg' },
-	{ name: 'icon_info_close', location: 'icon_info_close.svg' },
-	{ name: 'icon_warning_close', location: 'icon_warning_close.svg' },
-	{ name: 'icon_success_close', location: 'icon_success_close.svg' },
-	{ name: 'icon_close_white', location: 'icon_close_white.svg' },
-	{ name: 'icon_avatar', location: 'icon_avatar.svg' },
+	{ name: 'icon-logo', location: 'logo.svg' },
+	{ name: 'icon-open', location: 'icon-accordion-open.svg' },
+	{ name: 'icon-close', location: 'icon-accordion-close.svg' },
+	{ name: 'icon-danger', location: 'icon-danger.svg' },
+	{ name: 'icon-info', location: 'icon-info.svg' },
+	{ name: 'icon-warning', location: 'icon-warning.svg' },
+	{ name: 'icon-success', location: 'icon-success.svg' },
+	{ name: 'icon-danger-white', location: 'icon-danger-white.svg' },
+	{ name: 'icon-info-white', location: 'icon-info-white.svg' },
+	{ name: 'icon-warning-white', location: 'icon-warning-white.svg' },
+	{ name: 'icon-success-white', location: 'icon-success-white.svg' },
+	{ name: 'icon-danger-close', location: 'icon-danger-close.svg' },
+	{ name: 'icon-info-close', location: 'icon-info-close.svg' },
+	{ name: 'icon-warning-close', location: 'icon-warning-close.svg' },
+	{ name: 'icon-success-close', location: 'icon-success-close.svg' },
+	{ name: 'icon-close-white', location: 'icon-close-white.svg' },
+	{ name: 'icon-avatar', location: 'icon-avatar.svg' },
+	{ name: 'icon-search-blue-bold', location: 'icon-search-blue-bold.svg' },
+	{ name: 'icon-search-blue', location: 'icon-search-blue.svg' },
+	{ name: 'icon-search-grey-bold', location: 'icon-search-grey-bold.svg' },
+	{ name: 'icon-search-white', location: 'icon-search-white.svg' },
 ];
 
 /* USAGE EXAMPLE =
-  {name: 'menu_dashboard', location: 'dashboard.svg'}
-  <mat-icon class="icon-menu" svgIcon="menu_dashboard"></mat-icon>
+  {name: 'menu-dashboard', location: 'dashboard.svg'}
+  <mat-icon class="icon-menu" svgIcon="menu-dashboard"></mat-icon>
 */

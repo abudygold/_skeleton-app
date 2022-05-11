@@ -29,9 +29,9 @@ export const CodeSnippetWithIconConst = `
 		<mat-expansion-panel-header>
 			<mat-panel-title>
 				<mat-icon class="icon-menu open"
-					svgIcon="icon_open"></mat-icon>
+					svgIcon="icon-open"></mat-icon>
 				<mat-icon class="icon-menu close"
-					svgIcon="icon_close"></mat-icon>
+					svgIcon="icon-close"></mat-icon>
 
 				Accordion 1
 			</mat-panel-title>
@@ -44,9 +44,9 @@ export const CodeSnippetWithIconConst = `
 		<mat-expansion-panel-header>
 			<mat-panel-title>
 				<mat-icon class="icon-menu open"
-					svgIcon="icon_open"></mat-icon>
+					svgIcon="icon-open"></mat-icon>
 				<mat-icon class="icon-menu close"
-					svgIcon="icon_close"></mat-icon>
+					svgIcon="icon-close"></mat-icon>
 
 				Accordion 2
 			</mat-panel-title>
@@ -63,9 +63,9 @@ export const CodeSnippetAsCardConst = `
 		<mat-expansion-panel-header>
 			<mat-panel-title>
 				<mat-icon class="icon-menu open"
-					svgIcon="icon_open"></mat-icon>
+					svgIcon="icon-open"></mat-icon>
 				<mat-icon class="icon-menu close"
-					svgIcon="icon_close"></mat-icon>
+					svgIcon="icon-close"></mat-icon>
 
 				Accordion 1
 			</mat-panel-title>
@@ -78,9 +78,9 @@ export const CodeSnippetAsCardConst = `
 		<mat-expansion-panel-header>
 			<mat-panel-title>
 				<mat-icon class="icon-menu open"
-					svgIcon="icon_open"></mat-icon>
+					svgIcon="icon-open"></mat-icon>
 				<mat-icon class="icon-menu close"
-					svgIcon="icon_close"></mat-icon>
+					svgIcon="icon-close"></mat-icon>
 
 				Accordion 2
 			</mat-panel-title>

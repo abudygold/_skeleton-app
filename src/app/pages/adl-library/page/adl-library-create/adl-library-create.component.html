@@ -1,1 +1,71 @@
-<p>adl-library-create works!</p>
+<h2 class="font-heading font-AxiataBold mb-3">Create Form Sample</h2>
+
+<!-- <p>This alert serves to display a short message, distract the user but does not interfere with the journey or flow.
+	Usually this alert displays success, error, warning, and other important messages.</p> -->
+
+<!-- <a href="https://www.carbondesignsystem.com/components/breadcrumb/usage/"
+	class="font-dark font-12px"
+	target="blank">
+	Source: https://www.carbondesignsystem.com/components/breadcrumb/usage/
+</a>
+<a href="https://getuikit.com/docs/breadcrumb"
+	class="font-dark font-12px"
+	target="blank">
+	Source: https://getuikit.com/docs/breadcrumb
+</a>
+<a href="https://mui.com/components/breadcrumbs/"
+	class="font-dark font-12px"
+	target="blank">
+	Source: https://mui.com/components/breadcrumbs/
+</a> -->
+
+<mat-divider class="mt-4 mb-2"></mat-divider>
+
+<div class="d-flex justify-content-between align-items-center my-4">
+	<p class="font-black font-AxiataBold mb-0">
+		Create
+	</p>
+
+	<button mat-flat-button
+		color="primary"
+		class="font-12px"
+		(click)="isShowSnippet = !isShowSnippet">
+		<mat-icon class="font-20px">code</mat-icon> Code
+	</button>
+</div>
+
+<div *ngIf="isShowSnippet">
+	<mat-tab-group mat-align-tabs="start">
+		<mat-tab label="HTML">
+			<pre><code [highlight]="codeSnippet" [languages]="['html']"></code></pre>
+		</mat-tab>
+		<mat-tab label="TS">
+			<pre><code [highlight]="codeSnippetTS" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Module">
+			<pre><code [highlight]="codeSnippetModule" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Form (HTML)">
+			<pre><code [highlight]="codeSnippetFormHTML" [languages]="['html']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Form (TS)">
+			<pre><code [highlight]="codeSnippetFormTS" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Path">
+			<pre><code [highlight]="codeSnippetPath" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Message Validation">
+			<pre><code [highlight]="codeSnippetValidation" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Resp Model">
+			<pre><code [highlight]="codeSnippetModel" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+	</mat-tab-group>
+</div>
+
+<div class="row">
+	<div class="col-12">
+		<app-adl-library-form [updateLoading]="isSubmit"
+			(onSubmitReq)="onSubmit($event)"></app-adl-library-form>
+	</div>
+</div>

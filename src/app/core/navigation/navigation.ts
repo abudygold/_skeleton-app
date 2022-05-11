@@ -29,14 +29,20 @@ const DesignMenuConst: NavigationModel = {
 	subMenu: [
 		{
 			level: 2,
-			name: 'Typography',
-			target: '/typography',
+			name: 'Folder & File Structure',
+			target: '/file-structure',
 		},
 		{
 			level: 2,
+			name: 'Typography',
+			target: '/typography',
+		},
+		/* TODO: Not Ready */
+		/* {
+			level: 2,
 			name: 'Color',
 			target: '/color',
-		},
+		}, */
 	],
 };
 
@@ -82,11 +88,12 @@ const ComponentMenuConst: NavigationModel = {
 			name: 'Breadcrumb',
 			target: '/breadcrumb',
 		},
-		{
+		/* TODO: Not Ready */
+		/* {
 			level: 2,
 			name: 'Date & Time Picker',
 			target: '/picker',
-		},
+		}, */
 		{
 			level: 2,
 			name: 'Form',
@@ -132,6 +139,11 @@ const ADLLibraryMenuConst: NavigationModel = {
 		},
 		{
 			level: 2,
+			name: 'Pipe & Directive',
+			target: '/adl-library/pipe-directive',
+		},
+		{
+			level: 2,
 			name: 'Base Service',
 			parentActive: [
 				'/adl-library/view-list',
@@ -147,7 +159,7 @@ const ADLLibraryMenuConst: NavigationModel = {
 				},
 				{
 					level: 3,
-					name: 'Create New Data',
+					name: 'New Data',
 					target: '/adl-library/create',
 				},
 				{
@@ -161,7 +173,7 @@ const ADLLibraryMenuConst: NavigationModel = {
 };
 
 export const NavigationConst = [
-	GetStartedMenuConst,
+	// GetStartedMenuConst,
 	DesignMenuConst,
 	ComponentMenuConst,
 	ADLLibraryMenuConst,

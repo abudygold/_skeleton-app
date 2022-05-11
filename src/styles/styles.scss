@@ -1,4 +1,4 @@
-@import '../../node_modules/axiata-ui-framework/axiata-ui-framework.styles.scss';
+@import '../../node_modules/adl-ui-framework/adl-ui-framework.styles.scss';
 @import '~highlight.js/styles/github-dark.css';
 
 /* Main Styles */
@@ -31,14 +31,6 @@ $font-family-base: $font-family-sans-serif !default;
 // @import 'component/slide-toggle';
 
 /* Lib */
-@import 'component/accordion';
-@import 'component/alert';
-@import 'component/avatar';
-@import 'component/breadcrumb';
-@import 'component/checkbox';
-@import 'component/input';
-@import 'component/button';
-@import 'component/typography';
 
 @import 'themes/theme';
 

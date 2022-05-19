@@ -1,4 +1,4 @@
-export const CodeSnippetSearchConst = `
+export const CodeSnippetSearchHTMLConst = `
 <adl-search [config]="searchConfig"
 	(updateSearch)="updateOutput($event)"></adl-search>
 `;
@@ -21,7 +21,7 @@ export class ADLLibrarySearchComponent implements OnInit {
 		this.searchConfig = new SearchModel('Search');
 	}
 
-	public updateOutput(value: any): void {
+	public updateSearch(value: any): void {
 		console.log('--- Update Search ---', value);
 	}
 }

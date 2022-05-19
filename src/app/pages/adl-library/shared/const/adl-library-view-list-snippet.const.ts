@@ -1,4 +1,4 @@
-export const CodeSnippetViewListConst = `
+export const CodeSnippetViewListHTMLConst = `
 <adl-table [table]="table"
 	(nextAction)="clickedButton($event)"></adl-table>
 `;
@@ -37,21 +37,10 @@ export class ADLLibraryViewListComponent implements OnInit, OnDestroy {
 	}
 
 	private initTable(): void {
-		const editButton = new TableButtonModel(
-			'Edit',
-			'edit',
-			'flat',
-			'icon',
-			'primary',
-			false,
-			'edit'
-		);
+		const editButton = new TableButtonModel('Edit', 'edit', false, 'edit');
 		const deleteButton = new TableButtonModel(
 			'Delete',
 			'delete',
-			'stroked',
-			'icon',
-			'warn',
 			false,
 			'delete'
 		);

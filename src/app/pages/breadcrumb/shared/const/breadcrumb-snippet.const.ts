@@ -1,4 +1,4 @@
-export const CodeSnippetConst = `
+export const CodeSnippetBreadcrumbConst = `
 <div class="row">
 	<div class="col-12">
 		<nav aria-label="breadcrumb">

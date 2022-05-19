@@ -1,4 +1,4 @@
-export const CodeSnippetConst = `
+export const CodeSnippetInputHTMLConst = `
 <div class="row">
 	<div class="col-md-2">No Icon</div>
 	<div class="col-md-2">
@@ -224,7 +224,7 @@ export const CodeSnippetConst = `
 </div>
 `;
 
-export const CodeSnippetTSConst = `
+export const CodeSnippetInputTSConst = `
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 
@@ -251,4 +251,25 @@ export class InputComponent implements OnInit {
 		);
 	}
 }
+`;
+
+export const CodeSnippetInputModuleConst = `
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+
+@NgModule({
+	imports: [
+		CommonModule,
+		FormsModule,
+		ReactiveFormsModule,
+		MatFormFieldModule,
+		MatInputModule,
+		MatIconModule,
+	],
+})
+export class InputModule {}
 `;

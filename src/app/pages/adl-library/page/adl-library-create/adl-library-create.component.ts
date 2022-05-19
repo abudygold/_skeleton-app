@@ -7,7 +7,7 @@ import {
 	CodeSnippetCreateFormTSConst,
 	CodeSnippetFormHTMLConst,
 	CodeSnippetFormModuleConst,
-	CodeSnippetFormRespModelConst,
+	CodeSnippetFormRequestModelConst,
 	CodeSnippetFormServicePathConst,
 	CodeSnippetFormTSConst,
 	CodeSnippetFormValidationConst,
@@ -28,7 +28,7 @@ export class ADLLibraryCreateComponent implements OnInit, OnDestroy {
 	public codeSnippetFormHTML!: string;
 	public codeSnippetFormTS!: string;
 	public codeSnippetPath!: string;
-	public codeSnippetModel!: string;
+	public codeSnippetReqModel!: string;
 	public codeSnippetValidation!: string;
 
 	private subscribers!: Subscription[];
@@ -43,7 +43,7 @@ export class ADLLibraryCreateComponent implements OnInit, OnDestroy {
 		this.codeSnippetFormHTML = CodeSnippetFormHTMLConst;
 		this.codeSnippetFormTS = CodeSnippetFormTSConst;
 		this.codeSnippetPath = CodeSnippetFormServicePathConst;
-		this.codeSnippetModel = CodeSnippetFormRespModelConst;
+		this.codeSnippetReqModel = CodeSnippetFormRequestModelConst;
 		this.codeSnippetValidation = CodeSnippetFormValidationConst;
 		this.subscribers = [];
 	}

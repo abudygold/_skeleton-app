@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { CodeSnippetConst, CodeSnippetTSConst } from '../../shared/const';
+import {
+	CodeSnippetInputHTMLConst,
+	CodeSnippetInputModuleConst,
+	CodeSnippetInputTSConst,
+} from '../../shared/const';
 
 @Component({
 	selector: 'app-input',
@@ -11,6 +15,7 @@ export class InputComponent implements OnInit {
 	public isShowSnippet!: boolean;
 	public codeSnippet!: string;
 	public codeSnippetTS!: string;
+	public codeSnippetModule!: string;
 	public form!: FormControl;
 	public formDisabled!: FormControl;
 	public validationMessges!: never;
@@ -19,8 +24,9 @@ export class InputComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.isShowSnippet = false;
-		this.codeSnippet = CodeSnippetConst;
-		this.codeSnippetTS = CodeSnippetTSConst;
+		this.codeSnippet = CodeSnippetInputHTMLConst;
+		this.codeSnippetTS = CodeSnippetInputTSConst;
+		this.codeSnippetModule = CodeSnippetInputModuleConst;
 
 		this.form = new FormControl(null, Validators.required);
 		this.form.markAllAsTouched();

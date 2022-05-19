@@ -32,16 +32,16 @@
 	</button>
 </div>
 
-<!-- <div *ngIf="isShowSnippet">
-	<pre><code [highlight]="codeSnippet" [languages]="['html']"></code></pre>
-</div> -->
 <div *ngIf="isShowSnippet">
 	<mat-tab-group mat-align-tabs="start">
 		<mat-tab label="HTML">
-			<pre><code [highlight]="codeSnippet" [languages]="['html']"></code></pre>
+			<pre><code [highlight]="codeSnippetHTML" [languages]="['html']"></code></pre>
 		</mat-tab>
 		<mat-tab label="TS">
 			<pre><code [highlight]="codeSnippetTS" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Module">
+			<pre><code [highlight]="codeSnippetModule" [languages]="['typescript']"></code></pre>
 		</mat-tab>
 	</mat-tab-group>
 </div>
@@ -56,7 +56,9 @@
 
 	<button mat-flat-button
 		color="primary">
-		<mat-icon>search</mat-icon>
+		<mat-icon svgIcon="icon-search-white"
+			class="add-icons mr-2"></mat-icon>
+
 		Search
 	</button>
 
@@ -74,6 +76,7 @@
 		color="primary"
 		class="rounded-20px">
 		Search
+
 		<mat-icon>close</mat-icon>
 	</button>
 
@@ -90,7 +93,8 @@
 	<button mat-flat-button
 		color="primary"
 		class="button-icon px-2">
-		<mat-icon>search</mat-icon>
+		<mat-icon svgIcon="icon-search-white"
+			class="add-icons m-1"></mat-icon>
 	</button>
 
 	<span class="mx-2"></span>
@@ -111,6 +115,7 @@
 			class="my-auto mr-2"
 			[diameter]="20"
 			[strokeWidth]="3"></mat-spinner>
+
 		Click Me!
 	</button>
 
@@ -126,7 +131,9 @@
 			[diameter]="20"
 			[strokeWidth]="3"></mat-spinner>
 
-		<mat-icon class="my-auto mr-2">search</mat-icon>
+		<mat-icon svgIcon="icon-search-white"
+			class="add-icons-with-block mr-2"></mat-icon>
+
 		Click Me!
 	</button>
 </section>
@@ -143,7 +150,20 @@
 
 	<button mat-stroked-button
 		color="primary">
-		<mat-icon>search</mat-icon>
+		<mat-icon svgIcon="icon-search-blue"
+			class="add-icons mr-2"></mat-icon>
+
+		Search
+	</button>
+
+	<span class="mx-2"></span>
+
+	<button mat-stroked-button
+		color="primary"
+		class="border-0">
+		<mat-icon svgIcon="icon-search-blue"
+			class="add-icons pr-1"></mat-icon>
+
 		Search
 	</button>
 
@@ -173,12 +193,12 @@
 	</button>
 </section>
 
-
 <section class="d-flex align-items-center">
 	<button mat-stroked-button
 		color="primary"
 		class="button-icon px-2">
-		<mat-icon>search</mat-icon>
+		<mat-icon svgIcon="icon-search-blue"
+			class="add-icons m-1"></mat-icon>
 	</button>
 
 	<span class="mx-2"></span>
@@ -214,7 +234,9 @@
 			[diameter]="20"
 			[strokeWidth]="3"></mat-spinner>
 
-		<mat-icon class="my-auto mr-2">search</mat-icon>
+		<mat-icon svgIcon="icon-search-blue"
+			class="add-icons-with-block mr-2"></mat-icon>
+
 		Click Me!
 	</button>
 </section>

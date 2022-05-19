@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CodeSnippetConst, CodeSnippetTSConst } from '../../shared/const';
+import {
+	CodeSnippetButtonHTMLConst,
+	CodeSnippetButtonModuleConst,
+	CodeSnippetButtonTSConst,
+} from '../../shared/const';
 
 @Component({
 	selector: 'app-button',
@@ -8,16 +12,18 @@ import { CodeSnippetConst, CodeSnippetTSConst } from '../../shared/const';
 })
 export class ButtonComponent implements OnInit {
 	public isShowSnippet!: boolean;
+	public codeSnippetHTML!: string;
 	public codeSnippetTS!: string;
-	public codeSnippet!: string;
+	public codeSnippetModule!: string;
 	public isLoading!: boolean;
 
 	constructor() {}
 
 	ngOnInit(): void {
 		this.isShowSnippet = false;
-		this.codeSnippet = CodeSnippetConst;
-		this.codeSnippetTS = CodeSnippetTSConst;
+		this.codeSnippetHTML = CodeSnippetButtonHTMLConst;
+		this.codeSnippetTS = CodeSnippetButtonTSConst;
+		this.codeSnippetModule = CodeSnippetButtonModuleConst;
 		this.isLoading = false;
 	}
 

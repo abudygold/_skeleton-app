@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {
-	CodeSnippetAsCardConst,
-	CodeSnippetBasicConst,
-	CodeSnippetWithIconConst,
+	CodeSnippetAccordionAsCardHTMLConst,
+	CodeSnippetAccordionBasicHTMLConst,
+	CodeSnippetAccordionModuleConst,
+	CodeSnippetAccordionWithIconHTMLConst,
 } from '../../shared/const';
 
 @Component({
@@ -17,6 +18,7 @@ export class AccordionComponent implements OnInit {
 	public codeSnippetBasic!: string;
 	public codeSnippetWithIcon!: string;
 	public codeSnippetAsCard!: string;
+	public codeSnippetModule!: string;
 
 	constructor() {}
 
@@ -24,8 +26,9 @@ export class AccordionComponent implements OnInit {
 		this.isShowAccordionBasic = false;
 		this.isShowAccordionWithIcon = false;
 		this.isShowAccordionAsCard = false;
-		this.codeSnippetBasic = CodeSnippetBasicConst;
-		this.codeSnippetWithIcon = CodeSnippetWithIconConst;
-		this.codeSnippetAsCard = CodeSnippetAsCardConst;
+		this.codeSnippetBasic = CodeSnippetAccordionBasicHTMLConst;
+		this.codeSnippetWithIcon = CodeSnippetAccordionWithIconHTMLConst;
+		this.codeSnippetAsCard = CodeSnippetAccordionAsCardHTMLConst;
+		this.codeSnippetModule = CodeSnippetAccordionModuleConst;
 	}
 }

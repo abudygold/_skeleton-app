@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { BaseService, TableButtonModel, TableModel } from 'adl-ui-framework';
 import { Subscription } from 'rxjs';
 import {
-	CodeSnippetViewListConst,
+	CodeSnippetViewListHTMLConst,
 	CodeSnippetViewListModuleConst,
 	CodeSnippetViewListServicePathConst,
 	CodeSnippetViewListTableConfigConst,
@@ -36,7 +36,7 @@ export class ADLLibraryViewListComponent implements OnInit, OnDestroy {
 	ngOnInit(): void {
 		this.isLoading = false;
 		this.isShowSnippet = false;
-		this.codeSnippet = CodeSnippetViewListConst;
+		this.codeSnippet = CodeSnippetViewListHTMLConst;
 		this.codeSnippetTS = CodeSnippetViewListTSConst;
 		this.codeSnippetModule = CodeSnippetViewListModuleConst;
 		this.codeSnippetTableConfig = CodeSnippetViewListTableConfigConst;
@@ -48,21 +48,10 @@ export class ADLLibraryViewListComponent implements OnInit, OnDestroy {
 	}
 
 	private initTable(): void {
-		const editButton = new TableButtonModel(
-			'Edit',
-			'edit',
-			'flat',
-			'icon',
-			'primary',
-			false,
-			'edit'
-		);
+		const editButton = new TableButtonModel('Edit', 'edit', false, 'edit');
 		const deleteButton = new TableButtonModel(
 			'Delete',
 			'delete',
-			'stroked',
-			'icon',
-			'warn',
 			false,
 			'delete'
 		);

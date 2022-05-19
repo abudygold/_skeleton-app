@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CodeSnippetConst, CodeSnippetWithTextConst } from '../../shared/const';
+import {
+	CodeSnippetAvatarHTMLConst,
+	CodeSnippetAvatarHTMLWithTextConst,
+	CodeSnippetAvatarModuleConst,
+} from '../../shared/const';
 
 @Component({
 	selector: 'app-avatar',
@@ -11,13 +15,15 @@ export class AvatarComponent implements OnInit {
 	public isShowSnippetWithText!: boolean;
 	public codeSnippet!: string;
 	public codeSnippetWithText!: string;
+	public codeSnippetModule!: string;
 
 	constructor() {}
 
 	ngOnInit(): void {
 		this.isShowSnippet = false;
 		this.isShowSnippetWithText = false;
-		this.codeSnippet = CodeSnippetConst;
-		this.codeSnippetWithText = CodeSnippetWithTextConst;
+		this.codeSnippet = CodeSnippetAvatarHTMLConst;
+		this.codeSnippetWithText = CodeSnippetAvatarHTMLWithTextConst;
+		this.codeSnippetModule = CodeSnippetAvatarModuleConst;
 	}
 }

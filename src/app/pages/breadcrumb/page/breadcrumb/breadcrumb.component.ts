@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CodeSnippetConst } from '../../shared/const';
+import { CodeSnippetBreadcrumbConst } from '../../shared/const';
 
 @Component({
 	selector: 'app-breadcrumb',
@@ -14,6 +14,6 @@ export class BreadcrumbComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.isShowSnippet = false;
-		this.codeSnippet = CodeSnippetConst;
+		this.codeSnippet = CodeSnippetBreadcrumbConst;
 	}
 }

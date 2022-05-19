@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CodeSnippetConst } from '../../shared/const';
+import { CodeSnippetTypographyHTMLConst } from '../../shared/const';
 
 @Component({
 	selector: 'app-typography',
@@ -14,6 +14,6 @@ export class TypographyComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.isShowSnippet = false;
-		this.codeSnippet = CodeSnippetConst;
+		this.codeSnippet = CodeSnippetTypographyHTMLConst;
 	}
 }

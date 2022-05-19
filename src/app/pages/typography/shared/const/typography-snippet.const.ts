@@ -1,4 +1,4 @@
-export const CodeSnippetConst = `
+export const CodeSnippetTypographyHTMLConst = `
 <!--
 InterBlack | InterBold | InterExtraBold | InterExtraLight | InterLight | InterMedium | InterRegular | InterSemiBold | InterThin | 
 Axiata | AxiataBold | AxiataBook | AxiataBookItalic

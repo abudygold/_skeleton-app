@@ -21,35 +21,25 @@ const GetStartedMenuConst: NavigationModel = {
 };
 
 /* Design Menu */
-const DesignMenuConst: NavigationModel = {
+const FolderMenuConst: NavigationModel = {
 	level: 1,
-	name: 'Foundation',
-	parentActive: ['/typography', '/color'],
-	target: '',
-	subMenu: [
-		{
-			level: 2,
-			name: 'Folder & File Structure',
-			target: '/file-structure',
-		},
-		{
-			level: 2,
-			name: 'Typography',
-			target: '/typography',
-		},
-		/* TODO: Not Ready */
-		/* {
-			level: 2,
-			name: 'Color',
-			target: '/color',
-		}, */
-	],
+	name: 'Folder & File Structure',
+	target: '/file-structure',
+	subMenu: [],
+};
+
+/* Design Menu */
+const TypographyMenuConst: NavigationModel = {
+	level: 1,
+	name: 'Typography',
+	target: '/typography',
+	subMenu: [],
 };
 
 /* Component Menu */
 const ComponentMenuConst: NavigationModel = {
 	level: 1,
-	name: 'Component',
+	name: 'Components',
 	parentActive: [
 		'/accordion',
 		'/button',
@@ -117,6 +107,11 @@ const ComponentMenuConst: NavigationModel = {
 				},
 			],
 		},
+		{
+			level: 2,
+			name: 'Tooltip',
+			target: '/tooltip',
+		},
 	],
 };
 
@@ -174,7 +169,8 @@ const ADLLibraryMenuConst: NavigationModel = {
 
 export const NavigationConst = [
 	// GetStartedMenuConst,
-	DesignMenuConst,
+	FolderMenuConst,
+	TypographyMenuConst,
 	ComponentMenuConst,
 	ADLLibraryMenuConst,
 ];

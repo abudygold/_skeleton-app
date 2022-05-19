@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CodeSnippetConst, CodeSnippetTSConst } from '../../shared/const';
+import {
+	CodeSnippetChecboxHTMLConst,
+	CodeSnippetChecboxModuleConst,
+	CodeSnippetChecboxTSConst,
+} from '../../shared/const';
 
 export interface Task {
 	name: string;
@@ -16,6 +20,7 @@ export class CheckboxComponent implements OnInit {
 	public isShowSnippet!: boolean;
 	public codeSnippet!: string;
 	public codeSnippetTS!: string;
+	public codeSnippetModule!: string;
 
 	public allComplete!: boolean;
 	public task!: Task;
@@ -24,8 +29,9 @@ export class CheckboxComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.isShowSnippet = false;
-		this.codeSnippet = CodeSnippetConst;
-		this.codeSnippetTS = CodeSnippetTSConst;
+		this.codeSnippet = CodeSnippetChecboxHTMLConst;
+		this.codeSnippetTS = CodeSnippetChecboxTSConst;
+		this.codeSnippetModule = CodeSnippetChecboxModuleConst;
 		this.task = {
 			name: 'Select All',
 			completed: false,

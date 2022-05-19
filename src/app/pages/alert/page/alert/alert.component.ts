@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CodeSnippetConst } from '../../shared/const';
+import { CodeSnippetAlertHTMLConst } from '../../shared/const';
 
 @Component({
 	selector: 'app-alert',
@@ -8,12 +8,12 @@ import { CodeSnippetConst } from '../../shared/const';
 })
 export class AlertComponent implements OnInit {
 	public isShowSnippet!: boolean;
-	public codeSnippet!: string;
+	public codeSnippetHTML!: string;
 
 	constructor() {}
 
 	ngOnInit(): void {
 		this.isShowSnippet = false;
-		this.codeSnippet = CodeSnippetConst;
+		this.codeSnippetHTML = CodeSnippetAlertHTMLConst;
 	}
 }

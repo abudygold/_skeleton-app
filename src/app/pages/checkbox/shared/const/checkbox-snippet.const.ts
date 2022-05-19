@@ -1,4 +1,4 @@
-export const CodeSnippetConst = `
+export const CodeSnippetChecboxHTMLConst = `
 <section>
 	<p class="mb-2">
 		<mat-checkbox>Check me!</mat-checkbox>
@@ -29,7 +29,7 @@ export const CodeSnippetConst = `
 </section>
 `;
 
-export const CodeSnippetTSConst = `
+export const CodeSnippetChecboxTSConst = `
 import { Component, OnInit } from '@angular/core';
 
 export interface Task {
@@ -89,4 +89,21 @@ export class CheckboxComponent implements OnInit {
 		this.task.subtasks.forEach(t => (t.completed = completed));
 	}
 }
+`;
+
+export const CodeSnippetChecboxModuleConst = `
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
+@NgModule({
+	imports: [
+		CommonModule,
+		FormsModule,
+		MatCheckboxModule,
+	],
+})
+export class CheckboxModule {}
+
 `;

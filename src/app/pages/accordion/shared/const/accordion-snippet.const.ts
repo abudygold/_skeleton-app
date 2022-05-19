@@ -1,4 +1,4 @@
-export const CodeSnippetBasicConst = `
+export const CodeSnippetAccordionBasicHTMLConst = `
 <mat-accordion class="accordion-basic">
 	<mat-expansion-panel>
 		<mat-expansion-panel-header>
@@ -23,7 +23,7 @@ export const CodeSnippetBasicConst = `
 </mat-accordion>
 `;
 
-export const CodeSnippetWithIconConst = `
+export const CodeSnippetAccordionWithIconHTMLConst = `
 <mat-accordion class="accordion-icon">
 	<mat-expansion-panel hideToggle>
 		<mat-expansion-panel-header>
@@ -57,7 +57,7 @@ export const CodeSnippetWithIconConst = `
 	</mat-expansion-panel>
 </mat-accordion>`;
 
-export const CodeSnippetAsCardConst = `
+export const CodeSnippetAccordionAsCardHTMLConst = `
 <mat-accordion class="accordion-icon-card">
 	<mat-expansion-panel hideToggle>
 		<mat-expansion-panel-header>
@@ -90,3 +90,18 @@ export const CodeSnippetAsCardConst = `
 			dolore magna aliqua.</p>
 	</mat-expansion-panel>
 </mat-accordion>`;
+
+export const CodeSnippetAccordionModuleConst = `
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { MatExpansionModule } from '@angular/material/expansion';
+
+@NgModule({
+	declarations: [AccordionComponent],
+	imports: [
+		CommonModule,
+		MatExpansionModule,
+	],
+})
+export class AccordionModule {}
+`;

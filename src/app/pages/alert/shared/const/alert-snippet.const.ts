@@ -1,4 +1,4 @@
-export const CodeSnippetConst = `
+export const CodeSnippetAlertHTMLConst = `
 <div class="row">
 	<div class="col-6">
 		<div class="alert alert-danger d-flex align-items-center"

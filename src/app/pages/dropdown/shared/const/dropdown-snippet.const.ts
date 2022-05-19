@@ -1,4 +1,4 @@
-export const CodeSnippetConst = `
+export const CodeSnippetDropdownHTMLConst = `
 <mat-form-field class="input-classic"
 		floatLabel="never">
 		<mat-label>Basic</mat-label>
@@ -31,7 +31,7 @@ export const CodeSnippetConst = `
 	</mat-form-field>
 `;
 
-export const CodeSnippetTSConst = `
+export const CodeSnippetDropdownTSConst = `
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
@@ -58,5 +58,21 @@ export class DropdownComponent implements OnInit {
 		];
 	}
 }
+`;
 
+export const CodeSnippetDropdownModuleConst = `
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+
+@NgModule({
+	imports: [
+		CommonModule,
+		FormsModule,
+		ReactiveFormsModule,
+		MatSelectModule,
+	],
+})
+export class DropdownModule {}
 `;

@@ -1,0 +1,109 @@
+<h2 class="font-heading font-AxiataBold mb-3">Tooltip</h2>
+
+<!-- <p>A text field is a basic text control that enables the user to type a small amount of text. No matter what app you
+	use, you’re bound to run across some little text field requiring your personal information. Even typing a question
+	into Google is considered filling out a form which has only one text field.</p> -->
+
+<!-- <p class="mb-0">Source:</p>
+
+<a href=" https://uxplanet.org/designing-perfect-text-field-clarity-accessibility-and-user-effort-d03c1e26004b"
+	class="d-block font-dark font-12px"
+	target="blank">
+	https://uxplanet.org/designing-perfect-text-field-clarity-accessibility-and-user-effort-d03c1e26004b
+</a>
+<a href="https://v12.material.angular.io/components/button/api"
+	class="d-block font-dark font-12px"
+	target="blank">
+	Angular Material - Button
+</a> -->
+
+<mat-divider class="mt-4 mb-2"></mat-divider>
+
+<div class="d-flex justify-content-between align-items-center my-4">
+	<p class="font-black font-AxiataBold mb-0">
+		Tooltip
+	</p>
+
+	<button mat-flat-button
+		color="primary"
+		class="font-12px"
+		(click)="isShowSnippet = !isShowSnippet">
+		<mat-icon class="font-20px">code</mat-icon> Code
+	</button>
+</div>
+
+<div *ngIf="isShowSnippet">
+	<mat-tab-group mat-align-tabs="start">
+		<mat-tab label="HTML">
+			<pre><code [highlight]="codeSnippetHTML" [languages]="['html']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Module">
+			<pre><code [highlight]="codeSnippetModule" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+	</mat-tab-group>
+</div>
+
+<div class="row">
+	<div class="col-md-12 col-12">
+		<p class="mb-1">
+			Above Left
+
+			<mat-icon #tooltip="matTooltip"
+				matTooltip="Standar tooltip"
+				[matTooltipPosition]="'above'"
+				matTooltipClass="start">info_outline</mat-icon>
+		</p>
+		<p class="mb-1">
+			Above
+
+			<mat-icon #tooltip="matTooltip"
+				matTooltip="Standar tooltip"
+				[matTooltipPosition]="'above'">info_outline</mat-icon>
+		</p>
+		<p class="mb-1">
+			Above Right
+
+			<mat-icon #tooltip="matTooltip"
+				matTooltip="Standar tooltip"
+				[matTooltipPosition]="'above'"
+				matTooltipClass="end">info_outline</mat-icon>
+		</p>
+		<p class="mb-1">
+			Below Left
+
+			<mat-icon #tooltip="matTooltip"
+				matTooltip="Standar tooltip"
+				[matTooltipPosition]="'below'"
+				matTooltipClass="start">info_outline</mat-icon>
+		</p>
+		<p class="mb-1">
+			Below
+
+			<mat-icon #tooltip="matTooltip"
+				matTooltip="Standar tooltip"
+				[matTooltipPosition]="'below'">info_outline</mat-icon>
+		</p>
+		<p class="mb-1">
+			Below Right
+
+			<mat-icon #tooltip="matTooltip"
+				matTooltip="Standar tooltip"
+				[matTooltipPosition]="'below'"
+				matTooltipClass="end">info_outline</mat-icon>
+		</p>
+		<p class="mb-1">
+			Left
+
+			<mat-icon #tooltip="matTooltip"
+				matTooltip="Standar tooltip"
+				[matTooltipPosition]="'left'">info_outline</mat-icon>
+		</p>
+		<p class="mb-1">
+			Right
+
+			<mat-icon #tooltip="matTooltip"
+				matTooltip="Standar tooltip"
+				[matTooltipPosition]="'right'">info_outline</mat-icon>
+		</p>
+	</div>
+</div>

@@ -1,4 +1,4 @@
-export const CodeSnippetConst = `
+export const CodeSnippetAvatarHTMLConst = `
 <div class="row mb-2">
 	<div class="col-1">
 		<div class="avatar avatar-16 avatar-rounded">
@@ -195,7 +195,7 @@ export const CodeSnippetConst = `
 </div>
 `;
 
-export const CodeSnippetWithTextConst = `
+export const CodeSnippetAvatarHTMLWithTextConst = `
 <div class="row mb-4">
 	<div class="col-12 d-flex mb-3">
 		<div class="avatar avatar-32 avatar-rounded">
@@ -228,4 +228,18 @@ export const CodeSnippetWithTextConst = `
 		</div>
 	</div>
 </div>
+`;
+
+export const CodeSnippetAvatarModuleConst = `
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+
+@NgModule({
+	imports: [
+		CommonModule,
+		MatIconModule,
+	],
+})
+export class AvatarModule {}
 `;

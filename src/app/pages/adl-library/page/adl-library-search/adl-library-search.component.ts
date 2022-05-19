@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchModel } from 'adl-ui-framework';
 import {
-	CodeSnippetSearchConst,
+	CodeSnippetSearchHTMLConst,
 	CodeSnippetSearchModuleConst,
 	CodeSnippetSearchTSConst,
 } from '../../shared/const';
@@ -22,14 +22,14 @@ export class ADLLibrarySearchComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.isShowSnippet = false;
-		this.codeSnippet = CodeSnippetSearchConst;
+		this.codeSnippet = CodeSnippetSearchHTMLConst;
 		this.codeSnippetTS = CodeSnippetSearchTSConst;
 		this.codeSnippetModule = CodeSnippetSearchModuleConst;
 
 		this.searchConfig = new SearchModel('Search');
 	}
 
-	public updateOutput(value: any): void {
+	public updateSearch(value: any): void {
 		console.log('--- Update Search ---', value);
 	}
 }

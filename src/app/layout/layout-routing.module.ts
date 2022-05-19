@@ -91,6 +91,13 @@ const routes: Routes = [
 						m => m.StructureModule
 					),
 			},
+			{
+				path: 'tooltip',
+				loadChildren: () =>
+					import('../pages/tooltip/tooltip.module').then(
+						m => m.TooltipModule
+					),
+			},
 		],
 	},
 ];

@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { CodeSnippetConst, CodeSnippetTSConst } from '../../shared/const';
+import {
+	CodeSnippetDropdownHTMLConst,
+	CodeSnippetDropdownModuleConst,
+	CodeSnippetDropdownTSConst,
+} from '../../shared/const';
 
 @Component({
 	selector: 'app-dropdown',
@@ -11,6 +15,7 @@ export class DropdownComponent implements OnInit {
 	public isShowSnippet!: boolean;
 	public codeSnippet!: string;
 	public codeSnippetTS!: string;
+	public codeSnippetModule!: string;
 	public toppings!: FormControl;
 	public toppingList!: string[];
 
@@ -18,8 +23,9 @@ export class DropdownComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.isShowSnippet = false;
-		this.codeSnippet = CodeSnippetConst;
-		this.codeSnippetTS = CodeSnippetTSConst;
+		this.codeSnippet = CodeSnippetDropdownHTMLConst;
+		this.codeSnippetTS = CodeSnippetDropdownTSConst;
+		this.codeSnippetModule = CodeSnippetDropdownModuleConst;
 		this.toppingList = [
 			'Extra cheese',
 			'Mushroom',

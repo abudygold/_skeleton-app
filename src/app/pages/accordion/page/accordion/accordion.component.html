@@ -35,7 +35,14 @@
 </div>
 
 <div *ngIf="isShowAccordionBasic">
-	<pre><code [highlight]="codeSnippetBasic" [languages]="['html']"></code></pre>
+	<mat-tab-group mat-align-tabs="start">
+		<mat-tab label="HTML">
+			<pre><code [highlight]="codeSnippetBasic" [languages]="['html']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Module">
+			<pre><code [highlight]="codeSnippetModule" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+	</mat-tab-group>
 </div>
 
 <mat-accordion class="accordion-basic">
@@ -75,7 +82,14 @@
 </div>
 
 <div *ngIf="isShowAccordionWithIcon">
-	<pre><code [highlight]="codeSnippetWithIcon" [languages]="['html']"></code></pre>
+	<mat-tab-group mat-align-tabs="start">
+		<mat-tab label="HTML">
+			<pre><code [highlight]="codeSnippetWithIcon" [languages]="['html']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Module">
+			<pre><code [highlight]="codeSnippetModule" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+	</mat-tab-group>
 </div>
 
 <mat-accordion class="accordion-icon">
@@ -125,7 +139,14 @@
 </div>
 
 <div *ngIf="isShowAccordionAsCard">
-	<pre><code [highlight]="codeSnippetAsCard" [languages]="['html']"></code></pre>
+	<mat-tab-group mat-align-tabs="start">
+		<mat-tab label="HTML">
+			<pre><code [highlight]="codeSnippetAsCard" [languages]="['html']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Module">
+			<pre><code [highlight]="codeSnippetModule" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+	</mat-tab-group>
 </div>
 
 <mat-accordion class="accordion-card">

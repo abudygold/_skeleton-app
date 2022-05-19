@@ -33,7 +33,14 @@
 </div>
 
 <div *ngIf="isShowSnippet">
-	<pre><code [highlight]="codeSnippet" [languages]="['html']"></code></pre>
+	<mat-tab-group mat-align-tabs="start">
+		<mat-tab label="HTML">
+			<pre><code [highlight]="codeSnippet" [languages]="['html']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Module">
+			<pre><code [highlight]="codeSnippetModule" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+	</mat-tab-group>
 </div>
 
 <!-- 16 -->
@@ -250,7 +257,14 @@
 </div>
 
 <div *ngIf="isShowSnippetWithText">
-	<pre><code [highlight]="codeSnippetWithText" [languages]="['html']"></code></pre>
+	<mat-tab-group mat-align-tabs="start">
+		<mat-tab label="HTML">
+			<pre><code [highlight]="codeSnippetWithText" [languages]="['html']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Module">
+			<pre><code [highlight]="codeSnippetModule" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+	</mat-tab-group>
 </div>
 
 <!-- Avatar With Text -->

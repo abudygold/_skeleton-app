@@ -4,20 +4,22 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { HighlightModule } from 'ngx-highlightjs';
-import { AvatarRoutingModule } from './avatar-routing.module';
-import { AvatarComponent } from './page/avatar';
+import { TooltipComponent } from './page/tooltip';
+import { TooltipRoutingModule } from './tooltip-routing.module';
 
 @NgModule({
-	declarations: [AvatarComponent],
+	declarations: [TooltipComponent],
 	imports: [
 		CommonModule,
-		AvatarRoutingModule,
+		TooltipRoutingModule,
+		MatTooltipModule,
 		MatIconModule,
 		MatDividerModule,
 		MatButtonModule,
-		MatTabsModule,
 		HighlightModule,
+		MatTabsModule,
 	],
 })
-export class AvatarModule {}
+export class TooltipModule {}

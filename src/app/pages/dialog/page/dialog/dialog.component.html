@@ -1,0 +1,58 @@
+<h2 class="font-heading font-AxiataBold mb-3">Tabs</h2>
+
+<!-- <p>The dropdown is used to select an option. Each option has a specific value, or can usually be used like sorting or
+	filtering.</p> -->
+
+<p class="mb-0">Source:</p>
+
+<a href="https://atlassian.design/components/modal-dialog/examples"
+	class="d-block font-dark font-12px"
+	target="blank">
+	https://atlassian.design/components/modal-dialog/examples
+</a>
+<a href="https://v12.material.angular.io/components/dialog/overview"
+	class="d-block font-dark font-12px"
+	target="blank">
+	Angular Material - Dialog
+</a>
+
+<mat-divider class="mt-4 mb-2"></mat-divider>
+
+<div class="d-flex justify-content-between align-items-center my-4">
+	<p class="font-black font-AxiataBold mb-0">
+		Dialog
+	</p>
+
+	<button mat-flat-button
+		color="primary"
+		class="font-12px"
+		(click)="isShowSnippet = !isShowSnippet">
+		<mat-icon class="font-20px">code</mat-icon> Code
+	</button>
+</div>
+
+<div *ngIf="isShowSnippet">
+	<mat-tab-group mat-align-tabs="start">
+		<mat-tab label="Open Dialog (HTML)">
+			<pre><code [highlight]="codeSnippetHTMLOpenDialog" [languages]="['html']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Open Dialog (TS)">
+			<pre><code [highlight]="codeSnippetTSOpenDialog" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Dialog Component (HTML)">
+			<pre><code [highlight]="codeSnippetHTML" [languages]="['html']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Dialog Component (TS)">
+			<pre><code [highlight]="codeSnippetTS" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Module">
+			<pre><code [highlight]="codeSnippetModule" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+	</mat-tab-group>
+</div>
+
+<div class="row">
+	<div class="col-12">
+		<p (click)="openDialog()">Click Me!</p>
+	</div>
+</div>

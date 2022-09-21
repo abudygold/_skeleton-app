@@ -63,9 +63,5 @@
 	</mat-tab-group>
 </div>
 
-<div class="row">
-	<div class="col-12">
-		<app-adl-library-form [updateLoading]="isSubmit"
-			(onSubmitReq)="onSubmit($event)"></app-adl-library-form>
-	</div>
-</div>
+<app-adl-library-form [updateLoading]="isSubmit"
+	(onSubmitReq)="onSubmit($event)"></app-adl-library-form>

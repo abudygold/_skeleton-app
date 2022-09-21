@@ -1,10 +1,8 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import '../../node_modules/adl-ui-framework/adl-ui-framework.styles.scss';
 @import '~highlight.js/styles/github-dark.css';
 
 @include font_mixins('/assets/fonts/');
-
-/* Main Styles */
-@import 'abstracts/variables';
 
 $font-family-sans-serif: $font-family-medium !default;
 $font-family-monospace: $font-family-medium !default;
@@ -12,18 +10,9 @@ $font-family-base: $font-family-sans-serif !default;
 
 @import './customize-material.scss';
 
-@import 'base/background';
-@import 'base/border';
-@import 'base/cursor';
-@import 'base/font';
-@import 'base/layout';
-@import 'base/spacing';
-
 @import 'component/toolbar';
 @import 'component/sidenav';
 // @import 'component/pagination';
-
-/* Lib */
 
 @import 'themes/theme';
 

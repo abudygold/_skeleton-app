@@ -66,11 +66,7 @@
 	</mat-tab-group>
 </div>
 
-<div class="row">
-	<div class="col-12">
-		<app-adl-library-form *ngIf="user"
-			[updateLoading]="isSubmit"
-			[userDetail]="user"
-			(onSubmitReq)="onSubmit($event)"></app-adl-library-form>
-	</div>
-</div>
+<app-adl-library-form *ngIf="user"
+	[updateLoading]="isSubmit"
+	[userDetail]="user"
+	(onSubmitReq)="onSubmit($event)"></app-adl-library-form>

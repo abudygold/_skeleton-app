@@ -157,6 +157,6 @@ import { environment } from '../../../../../environments/environment';
 
 const listPath = '/user';
 
-/* adding $ before curly brackets */
+/* change {} to \${} */
 export const UserViewListServicePathConst = {environment.api.baseUrl}{listPath};
 `;

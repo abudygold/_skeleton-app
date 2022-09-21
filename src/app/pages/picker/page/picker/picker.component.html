@@ -1,1 +1,143 @@
-<p>picker works!</p>
+<h2 class="font-heading font-AxiataBold mb-3">Date & Time Picker</h2>
+
+<!-- <p>The dropdown is used to select an option. Each option has a specific value, or can usually be used like sorting or
+	filtering.</p> -->
+
+<p class="mb-0">Source:</p>
+
+<a href="https://www.carbondesignsystem.com/components/date-picker/usage/"
+	class="d-block font-dark font-12px"
+	target="blank">
+	https://www.carbondesignsystem.com/components/date-picker/usage/
+</a>
+<a href="https://v12.material.angular.io/components/datepicker/overview"
+	class="d-block font-dark font-12px"
+	target="blank">
+	Angular Material - Datepicker
+</a>
+<a href="https://tonysamperi.github.io/ngx-mat-timepicker"
+	class="d-block font-dark font-12px"
+	target="blank">
+	ngx-mat-timepicker v.12.1.1 - Timepicker
+</a>
+
+
+<p class="mb-0">Dependencies:</p>
+
+<a href="https://www.npmjs.com/package/@angular/material-moment-adapter/v/12.2.13"
+	class="d-block font-dark font-12px"
+	target="blank">
+	npm i @angular/material-moment-adapter@12.2.13
+</a>
+<a href="https://momentjs.com/"
+	class="d-block font-dark font-12px"
+	target="blank">
+	npm install moment --save
+</a>
+
+<mat-divider class="mt-4 mb-2"></mat-divider>
+
+<div class="d-flex justify-content-between align-items-center my-4">
+	<p class="font-black font-AxiataBold mb-0">
+		Date & Time Picker
+	</p>
+
+	<button mat-flat-button
+		color="primary"
+		class="font-12px"
+		(click)="isShowSnippet = !isShowSnippet">
+		<mat-icon class="font-20px">code</mat-icon> Code
+	</button>
+</div>
+
+<div *ngIf="isShowSnippet">
+	<mat-tab-group mat-align-tabs="start">
+		<mat-tab label="App Config Const">
+			<pre><code [highlight]="codeSnippetAppConfig" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+		<mat-tab label="App Module">
+			<pre><code [highlight]="codeSnippetAppModule" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+		<mat-tab label="HTML">
+			<pre><code [highlight]="codeSnippetHTML" [languages]="['html']"></code></pre>
+		</mat-tab>
+		<mat-tab label="TS">
+			<pre><code [highlight]="codeSnippetTS" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Module">
+			<pre><code [highlight]="codeSnippetModule" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+	</mat-tab-group>
+</div>
+
+<div class="row">
+	<div class="col-12">
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				placeholder="Select Date"
+				[matDatepicker]="pickerDate"
+				disabled>
+			<mat-datepicker-toggle matSuffix
+				[for]="pickerDate"></mat-datepicker-toggle>
+			<mat-datepicker #pickerDate
+				disabled="false"></mat-datepicker>
+		</mat-form-field>
+
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				placeholder="Select Date (Year)"
+				[matDatepicker]="pickerMonth"
+				disabled>
+			<mat-datepicker-toggle matSuffix
+				[for]="pickerMonth"></mat-datepicker-toggle>
+			<mat-datepicker #pickerMonth
+				startView="year"
+				disabled="false"></mat-datepicker>
+		</mat-form-field>
+
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				placeholder="Select Date (Multi Year)"
+				[matDatepicker]="pickerYear"
+				disabled>
+			<mat-datepicker-toggle matSuffix
+				[for]="pickerYear"></mat-datepicker-toggle>
+			<mat-datepicker #pickerYear
+				startView="multi-year"
+				disabled="false"></mat-datepicker>
+		</mat-form-field>
+
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				[(ngModel)]="selectedTime"
+				[ngxMatTimepicker]="pickerA"
+				placeholder="Timepicker with 12h format"
+				readonly />
+			<mat-icon matSuffix
+				(click)="pickerA.open()">
+				watch_later
+			</mat-icon>
+		</mat-form-field>
+		<ngx-mat-timepicker #pickerA></ngx-mat-timepicker>
+
+		<mat-form-field class="input-classic input-no-hint"
+			floatLabel="never">
+			<input matInput
+				[format]="24"
+				[(ngModel)]="selectedTime"
+				[ngxMatTimepicker]="pickerB"
+				placeholder="Timepicker with 24h format"
+				readonly />
+			<mat-icon matSuffix
+				(click)="pickerB.open()">
+				watch_later
+			</mat-icon>
+		</mat-form-field>
+		<ngx-mat-timepicker color="accent"
+			#pickerB></ngx-mat-timepicker>
+	</div>
+</div>

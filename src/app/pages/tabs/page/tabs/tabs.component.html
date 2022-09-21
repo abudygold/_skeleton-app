@@ -1,0 +1,66 @@
+<h2 class="font-heading font-AxiataBold mb-3">Tabs</h2>
+
+<!-- <p>The dropdown is used to select an option. Each option has a specific value, or can usually be used like sorting or
+	filtering.</p> -->
+
+<p class="mb-0">Source:</p>
+
+<a href="https://carbondesignsystem.com/components/tabs/usage/#overview"
+	class="d-block font-dark font-12px"
+	target="blank">
+	https://carbondesignsystem.com/components/tabs/usage/#overview
+</a>
+<a href="https://v12.material.angular.io/components/tabs/overview"
+	class="d-block font-dark font-12px"
+	target="blank">
+	Angular Material - Tabs
+</a>
+
+<mat-divider class="mt-4 mb-2"></mat-divider>
+
+<div class="d-flex justify-content-between align-items-center my-4">
+	<p class="font-black font-AxiataBold mb-0">
+		Tabs
+	</p>
+
+	<button mat-flat-button
+		color="primary"
+		class="font-12px"
+		(click)="isShowSnippet = !isShowSnippet">
+		<mat-icon class="font-20px">code</mat-icon> Code
+	</button>
+</div>
+
+<div *ngIf="isShowSnippet">
+	<mat-tab-group mat-align-tabs="start">
+		<mat-tab label="HTML">
+			<pre><code [highlight]="codeSnippetHTML" [languages]="['html']"></code></pre>
+		</mat-tab>
+		<mat-tab label="Module">
+			<pre><code [highlight]="codeSnippetModule" [languages]="['typescript']"></code></pre>
+		</mat-tab>
+	</mat-tab-group>
+</div>
+
+<div class="row">
+	<div class="col-12">
+		<p class="font-black font-AxiataBold">
+			Tabs Line
+		</p>
+		<mat-tab-group class="tabs-line">
+			<mat-tab label="First"> Content 1 </mat-tab>
+			<mat-tab label="Second"> Content 2 </mat-tab>
+			<mat-tab label="Third"> Content 3 </mat-tab>
+		</mat-tab-group>
+
+		<p class="font-black font-AxiataBold mt-4">
+			Tabs Contained
+		</p>
+
+		<mat-tab-group class="tabs-contained">
+			<mat-tab label="First"> Content 1 </mat-tab>
+			<mat-tab label="Second"> Content 2 </mat-tab>
+			<mat-tab label="Third"> Content 3 </mat-tab>
+		</mat-tab-group>
+	</div>
+</div>

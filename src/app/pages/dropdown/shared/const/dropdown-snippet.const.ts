@@ -19,10 +19,13 @@ export const CodeSnippetDropdownHTMLConst = `
 	<mat-select [formControl]="toppings"
 		multiple>
 		<mat-select-trigger>
-			{{toppings.value ? toppings.value[0] : ''}}
-			<span *ngIf="toppings.value?.length > 1"
-				class="example-additional-selection">
-				(+{{toppings.value.length - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+			<span *ngFor="let option of toppings.value; let optionLast = last">
+				<ng-container *ngIf="!optionLast">
+					{{ option }},
+				</ng-container>
+				<ng-container *ngIf="optionLast">
+					{{ option }}
+				</ng-container>
 			</span>
 		</mat-select-trigger>
 		<mat-option *ngFor="let topping of toppingList"

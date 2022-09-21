@@ -78,12 +78,11 @@ const ComponentMenuConst: NavigationModel = {
 			name: 'Breadcrumb',
 			target: '/breadcrumb',
 		},
-		/* TODO: Not Ready */
-		/* {
+		{
 			level: 2,
 			name: 'Date & Time Picker',
 			target: '/picker',
-		}, */
+		},
 		{
 			level: 2,
 			name: 'Form',
@@ -111,6 +110,16 @@ const ComponentMenuConst: NavigationModel = {
 			level: 2,
 			name: 'Tooltip',
 			target: '/tooltip',
+		},
+		{
+			level: 2,
+			name: 'Tabs',
+			target: '/tabs',
+		},
+		{
+			level: 2,
+			name: 'Dialog',
+			target: '/dialog',
 		},
 	],
 };

@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>This is an information</h2>
+<mat-dialog-content class="mat-typography">
+	<p>You have made changes to this file. Do you wish to continue?</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+	<button mat-button
+		mat-dialog-close>Cancel</button>
+	<button mat-flat-button
+		color="primary"
+		[mat-dialog-close]="true"
+		cdkFocusInitial>Confirm</button>
+</mat-dialog-actions>

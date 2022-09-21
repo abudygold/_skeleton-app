@@ -98,6 +98,18 @@ const routes: Routes = [
 						m => m.TooltipModule
 					),
 			},
+			{
+				path: 'tabs',
+				loadChildren: () =>
+					import('../pages/tabs/tabs.module').then(m => m.TabsModule),
+			},
+			{
+				path: 'dialog',
+				loadChildren: () =>
+					import('../pages/dialog/dialog.module').then(
+						m => m.DialogModule
+					),
+			},
 		],
 	},
 ];

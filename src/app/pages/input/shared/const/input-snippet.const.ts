@@ -209,6 +209,7 @@ import { FormControl, Validators } from '@angular/forms';
 export class InputComponent implements OnInit {
 	public form!: FormControl;
 	public formDisabled!: FormControl;
+	public validationMessges!: any;
 
 	constructor() {}
 
@@ -245,4 +246,12 @@ import { MatInputModule } from '@angular/material/input';
 	],
 })
 export class InputModule {}
+`;
+
+export const CodeSnippetInputFormValidationConst = `
+export const InputValidationMessageConst = {
+	column: [
+		{ type: 'required', message: 'Column is required' },
+	],
+};
 `;

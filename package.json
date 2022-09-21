@@ -4,9 +4,10 @@
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve",
-		"build": "ng build",
+		"build": "ng build --prod",
 		"watch": "ng build --watch --configuration development",
-		"test": "ng test"
+		"test": "ng test",
+		"postinstall": "ng build --aot --prod"
 	},
 	"private": true,
 	"dependencies": {
@@ -22,10 +23,13 @@
 		"@angular/platform-browser-dynamic": "~12.2.0",
 		"@angular/router": "~12.2.0",
 		"adl-ui-framework": "^1.0.10",
+		"enhanced-resolve": "^5.10.0",
+		"express": "^4.18.1",
 		"moment": "^2.29.4",
 		"ngx-device-detector": "^2.1.0",
 		"ngx-highlightjs": "^6.1.1",
 		"ngx-mat-timepicker": "^12.1.1",
+		"path": "^0.12.7",
 		"rxjs": "~6.6.0",
 		"tslib": "^2.3.0",
 		"zone.js": "~0.11.4"

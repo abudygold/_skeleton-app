@@ -1,197 +1,122 @@
 export const CodeSnippetAvatarHTMLConst = `
-<div class="row mb-2">
-	<div class="col-1">
-		<div class="avatar avatar-16 avatar-rounded">
-			<mat-icon class="icon-menu icon-avatar my-auto"
-				svgIcon="icon-avatar"></mat-icon>
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-16 avatar-rounded">
-			<img src="../../../../../assets/images/avatar-01.svg"
-				alt="" />
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-16 avatar-rounded font-AxiataBold">
-			<span class="my-auto">AD</span>
-		</div>
-	</div>
-	<div class="col-2">
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-16">
-			<mat-icon class="icon-menu icon-avatar my-auto"
-				svgIcon="icon-avatar"></mat-icon>
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-16 avatar-rounded">
-			<img src="../../../../../assets/images/avatar-01.svg"
-				alt="" />
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-16 font-AxiataBold">
-			<span class="my-auto">AD</span>
-		</div>
-	</div>
+/* 16 */
+<div class="avatar avatar-16 avatar-rounded">
+	<mat-icon class="icon-menu icon-avatar my-auto"
+		svgIcon="icon-avatar"></mat-icon>
 </div>
 
-<div class="row mb-2">
-	<div class="col-1">
-		<div class="avatar avatar-24 avatar-rounded">
-			<mat-icon class="icon-menu icon-avatar my-auto"
-				svgIcon="icon-avatar"></mat-icon>
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-24 avatar-rounded">
-			<img src="../../../../../assets/images/avatar-01.svg"
-				alt="" />
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-24 avatar-rounded font-AxiataBold">
-			<span class="my-auto">AD</span>
-		</div>
-	</div>
-	<div class="col-2">
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-24">
-			<mat-icon class="icon-menu icon-avatar my-auto"
-				svgIcon="icon-avatar"></mat-icon>
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-24 avatar-rounded">
-			<img src="../../../../../assets/images/avatar-01.svg"
-				alt="" />
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-24 font-AxiataBold">
-			<span class="my-auto">AD</span>
-		</div>
-	</div>
+<div class="avatar avatar-16 avatar-rounded">
+	<img src="../../../../../assets/images/avatar-01.svg"
+		alt="" />
 </div>
 
-<div class="row mb-2">
-	<div class="col-1">
-		<div class="avatar avatar-32 avatar-rounded">
-			<mat-icon class="icon-menu icon-avatar my-auto"
-				svgIcon="icon-avatar"></mat-icon>
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-32 avatar-rounded">
-			<img src="../../../../../assets/images/avatar-01.svg"
-				alt="" />
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-32 avatar-rounded font-AxiataBold">
-			<span class="my-auto">AD</span>
-		</div>
-	</div>
-	<div class="col-2">
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-32">
-			<mat-icon class="icon-menu icon-avatar my-auto"
-				svgIcon="icon-avatar"></mat-icon>
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-32 avatar-rounded">
-			<img src="../../../../../assets/images/avatar-01.svg"
-				alt="" />
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-32 font-AxiataBold">
-			<span class="my-auto">AD</span>
-		</div>
-	</div>
+<div class="avatar avatar-16 avatar-rounded font-AxiataBold">
+	<span class="my-auto">AD</span>
 </div>
 
-<div class="row mb-2">
-	<div class="col-1">
-		<div class="avatar avatar-40 avatar-rounded">
-			<mat-icon class="icon-menu icon-avatar my-auto"
-				svgIcon="icon-avatar"></mat-icon>
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-40 avatar-rounded">
-			<img src="../../../../../assets/images/avatar-01.svg"
-				alt="" />
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-40 avatar-rounded font-AxiataBold">
-			<span class="my-auto">AD</span>
-		</div>
-	</div>
-	<div class="col-2">
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-40">
-			<mat-icon class="icon-menu icon-avatar my-auto"
-				svgIcon="icon-avatar"></mat-icon>
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-40 avatar-rounded">
-			<img src="../../../../../assets/images/avatar-01.svg"
-				alt="" />
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-40 font-AxiataBold">
-			<span class="my-auto">AD</span>
-		</div>
-	</div>
+<div class="avatar avatar-16">
+	<mat-icon class="icon-menu icon-avatar my-auto"
+		svgIcon="icon-avatar"></mat-icon>
 </div>
 
-<div class="row">
-	<div class="col-1">
-		<div class="avatar avatar-48 avatar-rounded">
-			<mat-icon class="icon-menu icon-avatar my-auto"
-				svgIcon="icon-avatar"></mat-icon>
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-48 avatar-rounded">
-			<img src="../../../../../assets/images/avatar-01.svg"
-				alt="" />
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-48 avatar-rounded font-AxiataBold">
-			<span class="my-auto">AD</span>
-		</div>
-	</div>
-	<div class="col-2">
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-48">
-			<mat-icon class="icon-menu icon-avatar my-auto"
-				svgIcon="icon-avatar"></mat-icon>
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-48 avatar-rounded">
-			<img src="../../../../../assets/images/avatar-01.svg"
-				alt="" />
-		</div>
-	</div>
-	<div class="col-1">
-		<div class="avatar avatar-48 font-AxiataBold">
-			<span class="my-auto">AD</span>
-		</div>
-	</div>
+<div class="avatar avatar-16 font-AxiataBold">
+	<span class="my-auto">AD</span>
+</div>
+
+/* 24 */
+<div class="avatar avatar-24 avatar-rounded">
+	<mat-icon class="icon-menu icon-avatar my-auto"
+		svgIcon="icon-avatar"></mat-icon>
+</div>
+
+<div class="avatar avatar-24 avatar-rounded">
+	<img src="../../../../../assets/images/avatar-01.svg"
+		alt="" />
+</div>
+
+<div class="avatar avatar-24 avatar-rounded font-AxiataBold">
+	<span class="my-auto">AD</span>
+</div>
+
+<div class="avatar avatar-24">
+	<mat-icon class="icon-menu icon-avatar my-auto"
+		svgIcon="icon-avatar"></mat-icon>
+</div>
+
+<div class="avatar avatar-24 font-AxiataBold">
+	<span class="my-auto">AD</span>
+</div>
+
+/* 32 */
+<div class="avatar avatar-32 avatar-rounded">
+	<mat-icon class="icon-menu icon-avatar my-auto"
+		svgIcon="icon-avatar"></mat-icon>
+</div>
+
+<div class="avatar avatar-32 avatar-rounded">
+	<img src="../../../../../assets/images/avatar-01.svg"
+		alt="" />
+</div>
+
+<div class="avatar avatar-32 avatar-rounded font-AxiataBold">
+	<span class="my-auto">AD</span>
+</div>
+
+<div class="avatar avatar-32">
+	<mat-icon class="icon-menu icon-avatar my-auto"
+		svgIcon="icon-avatar"></mat-icon>
+</div>
+
+<div class="avatar avatar-32 font-AxiataBold">
+	<span class="my-auto">AD</span>
+</div>
+
+/* 40 */
+<div class="avatar avatar-40 avatar-rounded">
+	<mat-icon class="icon-menu icon-avatar my-auto"
+		svgIcon="icon-avatar"></mat-icon>
+</div>
+
+<div class="avatar avatar-40 avatar-rounded">
+	<img src="../../../../../assets/images/avatar-01.svg"
+		alt="" />
+</div>
+
+<div class="avatar avatar-40 avatar-rounded font-AxiataBold">
+	<span class="my-auto">AD</span>
+</div>
+
+<div class="avatar avatar-40">
+	<mat-icon class="icon-menu icon-avatar my-auto"
+		svgIcon="icon-avatar"></mat-icon>
+</div>
+
+<div class="avatar avatar-40 font-AxiataBold">
+	<span class="my-auto">AD</span>
+</div>
+
+/* 48 */
+<div class="avatar avatar-48 avatar-rounded">
+	<mat-icon class="icon-menu icon-avatar my-auto"
+		svgIcon="icon-avatar"></mat-icon>
+</div>
+
+<div class="avatar avatar-48 avatar-rounded">
+	<img src="../../../../../assets/images/avatar-01.svg"
+		alt="" />
+</div>
+
+<div class="avatar avatar-48 avatar-rounded font-AxiataBold">
+	<span class="my-auto">AD</span>
+</div>
+
+<div class="avatar avatar-48">
+	<mat-icon class="icon-menu icon-avatar my-auto"
+		svgIcon="icon-avatar"></mat-icon>
+</div>
+
+<div class="avatar avatar-48 font-AxiataBold">
+	<span class="my-auto">AD</span>
 </div>
 `;
 

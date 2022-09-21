@@ -9,11 +9,13 @@ import { CodeSnippetTypographyHTMLConst } from '../../shared/const';
 export class TypographyComponent implements OnInit {
 	public isShowSnippet!: boolean;
 	public codeSnippet!: string;
+	public isDesktop!: boolean;
 
 	constructor() {}
 
 	ngOnInit(): void {
 		this.isShowSnippet = false;
 		this.codeSnippet = CodeSnippetTypographyHTMLConst;
+		this.isDesktop = localStorage.getItem('isDesktop') === 'true';
 	}
 }

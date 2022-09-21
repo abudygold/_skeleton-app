@@ -15,9 +15,9 @@ import {
 	SafePipeModule,
 	SearchModule,
 	TableModule,
+	ToControlModule,
 } from 'adl-ui-framework';
 import { HighlightModule } from 'ngx-highlightjs';
-import { ToControlModule } from '../../ui/to-control/to-control.module';
 import { ADLLibraryRoutingModule } from './adl-library-routing.module';
 import { ADLLibraryFormComponent } from './component/adl-library-form';
 import { ADLLibraryCreateComponent } from './page/adl-library-create';

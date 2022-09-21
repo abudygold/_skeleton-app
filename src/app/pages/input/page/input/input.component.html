@@ -1,8 +1,8 @@
 <h2 class="font-heading font-AxiataBold mb-3">Text Fields</h2>
 
-<p>A text field is a basic text control that enables the user to type a small amount of text. No matter what app you
+<!-- <p>A text field is a basic text control that enables the user to type a small amount of text. No matter what app you
 	use, you’re bound to run across some little text field requiring your personal information. Even typing a question
-	into Google is considered filling out a form which has only one text field.</p>
+	into Google is considered filling out a form which has only one text field.</p> -->
 
 <p class="mb-0">Source:</p>
 
@@ -51,7 +51,8 @@
 	</mat-tab-group>
 </div>
 
-<div class="row mb-4">
+<div *ngIf="isDesktop"
+	class="row mb-4">
 	<div class="col-md-2 offset-md-2">Default</div>
 	<div class="col-md-3">Focus</div>
 	<div class="col-md-3">Disabled</div>
@@ -73,7 +74,8 @@
 			floatLabel="never">
 			<input matInput
 				placeholder="No Icon"
-				autocomplete="off">
+				autocomplete="off"
+				autofocus>
 		</mat-form-field>
 	</div>
 	<div class="col-md-3">

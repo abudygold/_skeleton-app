@@ -35,19 +35,24 @@
 	<pre><code [highlight]="codeSnippet" [languages]="['html']"></code></pre>
 </div>
 
-<div class="row">
-	<div class="col-4">
+<div *ngIf="isDesktop"
+	class="row">
+	<div class="col-md-4 col-12">
 		<h5 class="h5-InterBold text-center">Bold</h5>
 	</div>
-	<div class="col-4">
+	<div class="col-md-4 col-12">
 		<h5 class="h5-InterMedium text-center">Medium</h5>
 	</div>
-	<div class="col-4">
+	<div class="col-md-4 col-12">
 		<h5 class="h5-InterRegular text-center">Regular</h5>
 	</div>
 </div>
 <div class="row">
-	<div class="col-4">
+	<div *ngIf="!isDesktop"
+		class="col-md-4 col-12">
+		<h5 class="h5-InterBold text-center">Bold</h5>
+	</div>
+	<div class="col-md-4 col-12">
 		<h1 class="h1-InterBold">Heading 1</h1>
 		<h2 class="h2-InterBold">Heading 2</h2>
 		<h3 class="h3-InterBold">Heading 3</h3>
@@ -57,7 +62,12 @@
 		<p class="subtitle-32px-InterBold">Subtitle 2</p>
 		<p class="subtitle-28px-InterBold">Subtitle 3</p>
 	</div>
-	<div class="col-4">
+
+	<div *ngIf="!isDesktop"
+		class="col-md-4 col-12">
+		<h5 class="h5-InterMedium text-center">Medium</h5>
+	</div>
+	<div class="col-md-4 col-12">
 		<h1 class="h1-InterMedium">Heading 1</h1>
 		<h2 class="h2-InterMedium">Heading 2</h2>
 		<h3 class="h3-InterMedium">Heading 3</h3>
@@ -67,7 +77,12 @@
 		<p class="subtitle-32px-InterMedium">Subtitle 2</p>
 		<p class="subtitle-28px-InterMedium">Subtitle 3</p>
 	</div>
-	<div class="col-4">
+
+	<div *ngIf="!isDesktop"
+		class="col-md-4 col-12">
+		<h5 class="h5-InterRegular text-center">Regular</h5>
+	</div>
+	<div class="col-md-4 col-12">
 		<h1 class="h1-InterRegular">Heading 1</h1>
 		<h2 class="h2-InterRegular">Heading 2</h2>
 		<h3 class="h3-InterRegular">Heading 3</h3>

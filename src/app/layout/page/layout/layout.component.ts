@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { MatDrawerMode } from '@angular/material/sidenav';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
 	selector: 'app-layout',
@@ -7,27 +8,27 @@ import { MatDrawerMode } from '@angular/material/sidenav';
 	styleUrls: ['./layout.component.scss'],
 })
 export class LayoutComponent implements OnInit {
-	public side!: MatDrawerMode;
-	public opened!: boolean;
+	public mode!: MatDrawerMode;
 	public isDesktop!: boolean;
 
 	@HostListener('window:resize')
-	private onResize(): void {
-		this.isResolution(window.innerWidth);
+	public onResize(): void {
+		location.reload();
+		this.isResolution();
 	}
 
-	constructor() {
-		this.onResize();
-	}
+	constructor(private deviceService: DeviceDetectorService) { }
 
 	ngOnInit(): void {
-		this.isResolution(window.innerWidth);
+		this.isResolution();
 	}
 
-	private isResolution(width: number): void {
-		this.isDesktop = width >= 768;
-
-		this.opened = this.isDesktop;
-		this.side = this.isDesktop ? 'side' : 'over';
+	private isResolution(): void {
+		this.deviceService.setDeviceInfo(navigator.userAgent);
+		
+		this.isDesktop = this.deviceService.getDeviceInfo().deviceType === 'desktop';
+		this.mode = this.isDesktop ? 'side' : 'over';
+		
+		localStorage.setItem('isDesktop', this.isDesktop.toString());
 	}
 }

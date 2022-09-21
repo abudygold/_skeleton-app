@@ -19,6 +19,7 @@ export class InputComponent implements OnInit {
 	public form!: FormControl;
 	public formDisabled!: FormControl;
 	public validationMessges!: never;
+	public isDesktop!: boolean;
 
 	constructor() {}
 
@@ -27,6 +28,7 @@ export class InputComponent implements OnInit {
 		this.codeSnippet = CodeSnippetInputHTMLConst;
 		this.codeSnippetTS = CodeSnippetInputTSConst;
 		this.codeSnippetModule = CodeSnippetInputModuleConst;
+		this.isDesktop = localStorage.getItem('isDesktop') === 'true';
 
 		this.form = new FormControl(null, Validators.required);
 		this.form.markAllAsTouched();

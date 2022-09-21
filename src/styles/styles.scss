@@ -1,6 +1,8 @@
 @import '../../node_modules/adl-ui-framework/adl-ui-framework.styles.scss';
 @import '~highlight.js/styles/github-dark.css';
 
+@include font_mixins('/assets/fonts/');
+
 /* Main Styles */
 @import 'abstracts/variables';
 

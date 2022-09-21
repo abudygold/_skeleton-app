@@ -361,7 +361,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { ToControlModule } from '../../ui/to-control/to-control.module';
+import { ToControlModule } from 'adl-ui-framework';
 
 @NgModule({
 	imports: [

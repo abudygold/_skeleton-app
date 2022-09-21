@@ -1,198 +1,160 @@
 export const CodeSnippetButtonHTMLConst = `
-<section class="d-flex align-items-center mb-3">
-	<button mat-flat-button
-		color="primary">
-		Search
-	</button>
+/* Flat Button */
+<button mat-flat-button
+	color="primary">
+	Search
+</button>
 
-	<span class="mx-2"></span>
+<button mat-flat-button
+	color="primary">
+	<mat-icon svgIcon="icon-search-white"
+		class="add-icons mr-2"></mat-icon>
 
-	<button mat-flat-button
-		color="primary">
-		<mat-icon svgIcon="icon-search-white"
-			class="add-icons mr-2"></mat-icon>
+	Search
+</button>
 
-		Search
-	</button>
+<button mat-flat-button
+	color="primary"
+	class="rounded-20px">
+	Search
+</button>
 
-	<span class="mx-2"></span>
+<button mat-flat-button
+	color="primary"
+	class="rounded-20px">
+	Search
 
-	<button mat-flat-button
-		color="primary"
-		class="rounded-20px">
-		Search
-	</button>
+	<mat-icon>close</mat-icon>
+</button>
 
-	<span class="mx-2"></span>
+<button mat-flat-button
+	color="primary"
+	disabled>
+	Search
+</button>
 
-	<button mat-flat-button
-		color="primary"
-		class="rounded-20px">
-		Search
+<button mat-flat-button
+	color="primary"
+	class="button-icon px-2">
+	<mat-icon svgIcon="icon-search-white"
+		class="add-icons m-1"></mat-icon>
+</button>
 
-		<mat-icon>close</mat-icon>
-	</button>
+<a mat-flat-button
+	color="primary"
+	href="https://www.google.com/"
+	target="_blank">Link</a>
 
-	<span class="mx-2"></span>
+<button mat-flat-button
+	color="primary"
+	class="loader"
+	[disabled]="isLoading"
+	(click)="clickedButton()">
+	<mat-spinner *ngIf="isLoading"
+		class="my-auto mr-2"
+		[diameter]="20"
+		[strokeWidth]="3"></mat-spinner>
 
-	<button mat-flat-button
-		color="primary"
-		disabled>
-		Search
-	</button>
-</section>
+	Click Me!
+</button>
 
-<section class="d-flex align-items-center">
-	<button mat-flat-button
-		color="primary"
-		class="button-icon px-2">
-		<mat-icon svgIcon="icon-search-white"
-			class="add-icons m-1"></mat-icon>
-	</button>
+<button mat-flat-button
+	color="primary"
+	class="loader"
+	[disabled]="isLoading"
+	(click)="clickedButton()">
+	<mat-spinner *ngIf="isLoading"
+		class="my-auto mr-2"
+		[diameter]="20"
+		[strokeWidth]="3"></mat-spinner>
 
-	<span class="mx-2"></span>
+	<mat-icon svgIcon="icon-search-white"
+		class="add-icons-with-block mr-2"></mat-icon>
 
-	<a mat-flat-button
-		color="primary"
-		href="https://www.google.com/"
-		target="_blank">Link</a>
+	Click Me!
+</button>
+	
+/* Outline */
+<button mat-stroked-button
+	color="primary">
+	Search
+</button>
 
-	<span class="mx-2"></span>
+<button mat-stroked-button
+	color="primary">
+	<mat-icon svgIcon="icon-search-blue"
+		class="add-icons mr-2"></mat-icon>
 
-	<button mat-flat-button
-		color="primary"
-		class="loader"
-		[disabled]="isLoading"
-		(click)="clickedButton()">
-		<mat-spinner *ngIf="isLoading"
-			class="my-auto mr-2"
-			[diameter]="20"
-			[strokeWidth]="3"></mat-spinner>
+	Search
+</button>
 
-		Click Me!
-	</button>
+<button mat-stroked-button
+	color="primary"
+	class="border-0">
+	<mat-icon svgIcon="icon-search-blue"
+		class="add-icons pr-1"></mat-icon>
 
-	<span class="mx-2"></span>
+	Search
+</button>
 
-	<button mat-flat-button
-		color="primary"
-		class="loader"
-		[disabled]="isLoading"
-		(click)="clickedButton()">
-		<mat-spinner *ngIf="isLoading"
-			class="my-auto mr-2"
-			[diameter]="20"
-			[strokeWidth]="3"></mat-spinner>
+<button mat-stroked-button
+	color="primary"
+	class="rounded-20px">
+	Search
+</button>
 
-		<mat-icon svgIcon="icon-search-white"
-			class="add-icons-with-block mr-2"></mat-icon>
+<button mat-stroked-button
+	color="primary"
+	class="rounded-20px">
+	Search
+	<mat-icon>close</mat-icon>
+</button>
 
-		Click Me!
-	</button>
-</section>
+<button mat-stroked-button
+	color="primary"
+	disabled>
+	Search
+</button>
 
-<mat-divider class="my-4"></mat-divider>
+<button mat-stroked-button
+	color="primary"
+	class="button-icon px-2">
+	<mat-icon svgIcon="icon-search-blue"
+		class="add-icons m-1"></mat-icon>
+</button>
 
-<section class="d-flex align-items-center mb-3">
-	<button mat-stroked-button
-		color="primary">
-		Search
-	</button>
+<a mat-stroked-button
+	color="primary"
+	href="https://www.google.com/"
+	target="_blank">Link</a>
 
-	<span class="mx-2"></span>
+<button mat-stroked-button
+	color="primary"
+	class="loader"
+	[disabled]="isLoading"
+	(click)="clickedButton()">
+	<mat-spinner *ngIf="isLoading"
+		class="my-auto mr-2"
+		[diameter]="20"
+		[strokeWidth]="3"></mat-spinner>
+	Click Me!
+</button>
 
-	<button mat-stroked-button
-		color="primary">
-		<mat-icon svgIcon="icon-search-blue"
-			class="add-icons mr-2"></mat-icon>
+<button mat-stroked-button
+	color="primary"
+	class="loader"
+	[disabled]="isLoading"
+	(click)="clickedButton()">
+	<mat-spinner *ngIf="isLoading"
+		class="my-auto mr-2"
+		[diameter]="20"
+		[strokeWidth]="3"></mat-spinner>
 
-		Search
-	</button>
+	<mat-icon svgIcon="icon-search-blue"
+		class="add-icons-with-block mr-2"></mat-icon>
 
-	<span class="mx-2"></span>
-
-	<button mat-stroked-button
-		color="primary"
-		class="border-0">
-		<mat-icon svgIcon="icon-search-blue"
-			class="add-icons pr-1"></mat-icon>
-
-		Search
-	</button>
-
-	<span class="mx-2"></span>
-
-	<button mat-stroked-button
-		color="primary"
-		class="rounded-20px">
-		Search
-	</button>
-
-	<span class="mx-2"></span>
-
-	<button mat-stroked-button
-		color="primary"
-		class="rounded-20px">
-		Search
-		<mat-icon>close</mat-icon>
-	</button>
-
-	<span class="mx-2"></span>
-
-	<button mat-stroked-button
-		color="primary"
-		disabled>
-		Search
-	</button>
-</section>
-
-<section class="d-flex align-items-center">
-	<button mat-stroked-button
-		color="primary"
-		class="button-icon px-2">
-		<mat-icon svgIcon="icon-search-blue"
-			class="add-icons m-1"></mat-icon>
-	</button>
-
-	<span class="mx-2"></span>
-
-	<a mat-stroked-button
-		color="primary"
-		href="https://www.google.com/"
-		target="_blank">Link</a>
-
-	<span class="mx-2"></span>
-
-	<button mat-stroked-button
-		color="primary"
-		class="loader"
-		[disabled]="isLoading"
-		(click)="clickedButton()">
-		<mat-spinner *ngIf="isLoading"
-			class="my-auto mr-2"
-			[diameter]="20"
-			[strokeWidth]="3"></mat-spinner>
-		Click Me!
-	</button>
-
-	<span class="mx-2"></span>
-
-	<button mat-stroked-button
-		color="primary"
-		class="loader"
-		[disabled]="isLoading"
-		(click)="clickedButton()">
-		<mat-spinner *ngIf="isLoading"
-			class="my-auto mr-2"
-			[diameter]="20"
-			[strokeWidth]="3"></mat-spinner>
-
-		<mat-icon svgIcon="icon-search-blue"
-			class="add-icons-with-block mr-2"></mat-icon>
-
-		Click Me!
-	</button>
-</section>
+	Click Me!
+</button>
 `;
 
 export const CodeSnippetButtonTSConst = `

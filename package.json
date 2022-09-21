@@ -21,7 +21,7 @@
 		"@angular/platform-browser": "~12.2.0",
 		"@angular/platform-browser-dynamic": "~12.2.0",
 		"@angular/router": "~12.2.0",
-		"adl-ui-framework": "^1.0.9",
+		"adl-ui-framework": "^1.0.10",
 		"moment": "^2.29.4",
 		"ngx-device-detector": "^2.1.0",
 		"ngx-highlightjs": "^6.1.1",
